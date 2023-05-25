@@ -1,0 +1,8 @@
+.item {
+    width: 100%;
+    overflow: visible;
+    stroke: #fff;
+    stroke-width: 0;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
