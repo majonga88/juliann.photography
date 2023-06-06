@@ -13,7 +13,7 @@ export default function SimpleSidebar({ children }: { children: ReactNode }) {
   return (
     <Box minH="100vh" bg={loadBackgroundColor} color={loadColor}>
       <SidebarContent />
-      <Box ml={{ base: 0, md: 260, lg: 360 }}>
+      <Box ml={{ base: 0, md: 130, lg: 230 }}>
         {children}
       </Box>
     </Box>
@@ -100,7 +100,7 @@ const loadVariantColorForLogo = () => {
 const SidebarContent = () => {
   return (
     <Box
-      w={{ base: 'full', md: 260, lg: 360 }}
+      w={{ base: 'full', md: 130, lg: 230 }}
       pos="fixed"
       h="full"
       bg={loadBackgroundColor}>

@@ -14,14 +14,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-        <html lang="en" data-theme="light">
-        <head />
-        <body>
+    <html lang="en" >
+      <head />
+      <body>
         <StyledComponentsRegistry>
           <ColorModeScript type="cookie" nonce="testing" />
           <Provider>{children}</Provider>
-          </StyledComponentsRegistry>
-        </body>
-      </html>
+        </StyledComponentsRegistry>
+      </body>
+    </html>
   )
 }
