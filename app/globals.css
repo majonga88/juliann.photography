@@ -2,13 +2,6 @@ html {
   font-family: var(--font-inter);
 }
 
-#progress {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  transform: rotate(-90deg);
-}
-
 h2 {
   font-size: 4vw;
   left: calc(56vw);
@@ -29,16 +22,6 @@ section {
 
 section>div {
   overflow: hidden;
-}
-
-.progress {
-  position: fixed;
-  display: flex;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 5px;
-  bottom: 100px;
 }
 
 .back {

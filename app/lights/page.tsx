@@ -1,22 +1,27 @@
 "use client"
 
-import { lightsPhotosMetadata } from "@/data";
-import { Gallery } from "@/template/Gallery";
-import ScrollbarStyles from "@/template/Scrollbar";
+import { Gallery } from "@/component/Gallery/Gallery";
+import { Quote } from "@/component/Quote/Quote";
+import { lights } from "@/data";
+import StyledGallery from "@/styles/StyledGallery";
+import StyledScrollbar from "@/styles/StyledScrollbar";
 import LightSidebar from "@/template/light-sidebar";
 
 export default function Lights() {
   return (
-      <LightSidebar>
-        <ScrollbarStyles scrollbarCornerColor="rgb(133, 203, 231)" scrollbarThumbColor="rgb(133, 203, 231)" />
+    <LightSidebar metadata={lights}>
+      <StyledScrollbar color={lights.theme.scroll} />
+      <StyledGallery>
+        <Quote title={lights.title} quote={lights.quote} author={lights.author} />
         <Gallery
-          gallery={lightsPhotosMetadata}
+          gallery={lights}
           title="White lines of Canary Wharf"
           titleWidth={8}
           category="lights"
           alt="A building in Canary Wharf"
         />
-      </LightSidebar>
+      </StyledGallery>
+    </LightSidebar>
   )
 
 

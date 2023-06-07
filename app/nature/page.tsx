@@ -1,22 +1,27 @@
 "use client"
 
-import { naturePhotosMetadata } from "@/data";
-import { Gallery } from "@/template/Gallery";
-import ScrollbarStyles from "@/template/Scrollbar";
+import { Gallery } from "@/component/Gallery/Gallery";
+import { Quote } from "@/component/Quote/Quote";
+import { nature } from "@/data";
+import StyledGallery from "@/styles/StyledGallery";
+import StyledScrollbar from "@/styles/StyledScrollbar";
 import LightSidebar from "@/template/light-sidebar";
 
 export default function Nature() {
   return (
-      <LightSidebar>
-        <ScrollbarStyles scrollbarCornerColor="rgb(133, 203, 231)" scrollbarThumbColor="rgb(133, 203, 231)" />
+    <LightSidebar metadata={nature}>
+      <StyledScrollbar color={nature.theme.scroll} />
+      <StyledGallery>
+        <Quote title={nature.title} quote={nature.quote} author={nature.author} />
         <Gallery
-          gallery={naturePhotosMetadata}
+          gallery={nature}
           title="White lines of Canary Wharf"
           titleWidth={8}
           category="nature"
           alt="A building in Canary Wharf"
         />
-      </LightSidebar>
+      </StyledGallery>
+    </LightSidebar>
   )
 
 

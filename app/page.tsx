@@ -10,8 +10,6 @@ import {
 import React from "react";
 
 export default function Home() {
-
-
   return (
     <SimpleSidebar>
       <Grid
@@ -55,7 +53,7 @@ export default function Home() {
           <Tile title={'About'} path={'about'} reference={'about'} delay={0.5} />
         </GridItem>
       </Grid>
-      <Transition/>
+      <Transition backgroundColor='#000'/>
     </SimpleSidebar>
   )
 }

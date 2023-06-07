@@ -1,22 +1,27 @@
 "use client"
 
-import { naturePhotosMetadata } from "@/data";
-import { Gallery } from "@/template/Gallery";
-import ScrollbarStyles from "@/template/Scrollbar";
+import { Gallery } from "@/component/Gallery/Gallery";
+import { Quote } from "@/component/Quote/Quote";
+import { citylife } from "@/data";
+import StyledGallery from "@/styles/StyledGallery";
+import StyledScrollbar from "@/styles/StyledScrollbar";
 import LightSidebar from "@/template/light-sidebar";
 
 export default function Citylife() {
   return (
-      <LightSidebar>
-        <ScrollbarStyles scrollbarCornerColor="rgb(133, 203, 231)" scrollbarThumbColor="rgb(133, 203, 231)" />
+    <LightSidebar metadata={citylife}>
+      <StyledScrollbar color={citylife.theme.scroll} />
+      <StyledGallery>
+        <Quote title={citylife.title} quote={citylife.quote} author={citylife.author} />
         <Gallery
-          gallery={naturePhotosMetadata}
+          gallery={citylife}
           title="White lines of Canary Wharf"
           titleWidth={8}
           category="city-life"
           alt="A building in Canary Wharf"
         />
-      </LightSidebar>
+      </StyledGallery>
+    </LightSidebar>
   )
 
 
