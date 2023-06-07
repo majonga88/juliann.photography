@@ -67,7 +67,10 @@ export default function SimpleSidebar({ children }: { children: ReactNode }) {
           <SidebarContent onClose={onClose} />
         </DrawerContent>
       </Drawer>
-      <MobileNav display={{ base: 'flex', md: 'none' }} bg={loadBackgroundColor} onOpen={onOpen} logoColor={logoColor} logoVariantColor={logoVariantColor} />
+      <MobileNav display={{ base: 'flex', md: 'none' }} width={{
+        base: '100%',
+        sm: '80%',
+      }} bg={loadBackgroundColor} onOpen={onOpen} logoColor={logoColor} logoVariantColor={logoVariantColor} />
       <Box ml={{ base: 0, md: 260, lg: 360 }}>
         {children}
       </Box>

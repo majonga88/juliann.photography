@@ -2,10 +2,7 @@
 
 import { useScroll } from "framer-motion";
 import { Photo } from "../../../template/Photo";
-import { loadHoverColor } from "../../../template/sidebar";
-import { Transition } from "@/component/Transition/Transition";
 import { Progress } from "@/component/Progress/Progress";
-import { GalleryFooter } from "@/component/Gallery/Footer/GalleryFooter";
 
 export interface GalleryMetadata {
   theme: {

@@ -26,7 +26,7 @@ export default function SimpleSidebar({ children, metadata }: { children: ReactN
 const SidebarContent = ({ metadata }: Props) => {
   return (
     <Box
-      w={{ base: 'full', md: 130, lg: 230 }}
+      w={{ base: 0, md: 130, lg: 230 }}
       pos="fixed"
       h="full"
       bg={metadata.theme.background}>
