@@ -1,4 +1,4 @@
-import { Link } from "@chakra-ui/react";
+import { Link, color } from "@chakra-ui/react";
 import { Variants, motion } from "framer-motion";
 
 interface Props {
@@ -13,7 +13,10 @@ interface Props {
 
 export function Icon({ href, logoVariantColor, logoColor, viewBox, width, height, path }: Props) {
   return (
-    <Link href={href || '/'} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }} >
+    <Link href={href || '/'} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+            <motion.div
+        style={{ display: 'inline-block' }}
+      >
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox={viewBox}
@@ -35,8 +38,10 @@ export function Icon({ href, logoVariantColor, logoColor, viewBox, width, height
           strokeLinecap="round"
           strokeLinejoin="round"
           width="100%"
+          whileHover={{ fill: 'white', stroke: 'white' }}
         />
       </motion.svg>
+      </motion.div>
     </Link>
   )
 }
