@@ -2,14 +2,14 @@
 
 import { Gallery } from "@/component/Gallery/Gallery";
 import { Quote } from "@/component/Quote/Quote";
+import Sidebar from "@/component/Sidebar/Sidebar";
 import { lights } from "@/data";
 import StyledGallery from "@/styles/StyledGallery";
 import StyledScrollbar from "@/styles/StyledScrollbar";
-import LightSidebar from "@/template/light-sidebar";
 
 export default function Lights() {
   return (
-    <LightSidebar metadata={lights}>
+    <Sidebar isLight theme={lights.theme}>
       <StyledScrollbar color={lights.theme.scroll} />
       <StyledGallery>
         <Quote title={lights.title} quote={lights.quote} author={lights.author} />
@@ -21,7 +21,7 @@ export default function Lights() {
           alt="A building in Canary Wharf"
         />
       </StyledGallery>
-    </LightSidebar>
+    </Sidebar>
   )
 
 

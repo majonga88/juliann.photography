@@ -4,7 +4,7 @@ import { Variants, motion } from "framer-motion";
 interface Props {
   href?: string, 
   logoVariantColor: Variants,
-  logoColor: string,
+  logoColor?: string,
   viewBox?: string,
   width?: string,
   height?: string,

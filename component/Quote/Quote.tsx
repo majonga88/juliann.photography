@@ -3,6 +3,7 @@ import { League_Spartan, Work_Sans } from "next/font/google";
 
 interface Props {
     title: string,
+    description?: string,
     quote?: string,
     author?: string
 }
@@ -17,7 +18,7 @@ const ls400 = League_Spartan({
     subsets: ['latin'],
 });
 
-export function Quote({ title, quote, author }: Props) {
+export function Quote({ title, description, quote, author }: Props) {
 
     const headingSize = useBreakpointValue({ base: '2xl', md: '3xl', lg: '4xl' });
     const quoteSize = useBreakpointValue({ base: 'md', md: 'lg', lg: 'xl' });
@@ -28,6 +29,11 @@ export function Quote({ title, quote, author }: Props) {
             <GridItem w="100%">
                 <Heading as={'h1'} size={headingSize} className={ls400.className} lineHeight={'1.25'}>{title}</Heading>
             </GridItem>
+            {description && <GridItem w="100%">
+                <Flex className={ws300.className} fontSize={quoteSize} lineHeight={'1.25'}>
+                    {description}
+                </Flex>
+            </GridItem>}
             {quote && <GridItem w="100%">
                 <Flex className={ws300.className} fontSize={quoteSize} lineHeight={'1.25'}>
                     <i>

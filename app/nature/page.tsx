@@ -2,14 +2,14 @@
 
 import { Gallery } from "@/component/Gallery/Gallery";
 import { Quote } from "@/component/Quote/Quote";
+import Sidebar from "@/component/Sidebar/Sidebar";
 import { nature } from "@/data";
 import StyledGallery from "@/styles/StyledGallery";
 import StyledScrollbar from "@/styles/StyledScrollbar";
-import LightSidebar from "@/template/light-sidebar";
 
 export default function Nature() {
   return (
-    <LightSidebar metadata={nature}>
+    <Sidebar isLight theme={nature.theme}>
       <StyledScrollbar color={nature.theme.scroll} />
       <StyledGallery>
         <Quote title={nature.title} quote={nature.quote} author={nature.author} />
@@ -21,7 +21,7 @@ export default function Nature() {
           alt="A building in Canary Wharf"
         />
       </StyledGallery>
-    </LightSidebar>
+    </Sidebar>
   )
 
 

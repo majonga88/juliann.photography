@@ -2,15 +2,15 @@
 
 import { Gallery } from "@/component/Gallery/Gallery";
 import { Quote } from "@/component/Quote/Quote";
+import Sidebar from "@/component/Sidebar/Sidebar";
 import { architecture } from "@/data";
 import StyledGallery from "@/styles/StyledGallery";
 import StyledScrollbar from "@/styles/StyledScrollbar";
-import LightSidebar from "@/template/light-sidebar";
-import { Container } from "@chakra-ui/react";
+
 
 export default function Architecture() {
   return (
-    <LightSidebar metadata={architecture}>
+    <Sidebar isLight theme={architecture.theme}>
       <StyledScrollbar color={architecture.theme.scroll} />
       <StyledGallery>
         <Quote title={architecture.title} quote={architecture.quote} author={architecture.author}/>
@@ -18,11 +18,12 @@ export default function Architecture() {
           gallery={architecture}
           title="White lines of Canary Wharf"
           titleWidth={8}
+          hideTitleNumber={false}
           category="architecture"
           alt="A building in Canary Wharf"
         />
       </StyledGallery>
-    </LightSidebar>
+    </Sidebar>
   )
 
 

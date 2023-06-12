@@ -1,7 +1,8 @@
 "use client"
+import Sidebar from '@/component/Sidebar/Sidebar';
 import Tile from '@/component/Tile/Tile';
 import { Transition } from '@/component/Transition/Transition';
-import SimpleSidebar from '@/template/sidebar';
+import { home } from '@/data';
 import {
   Grid,
   GridItem,
@@ -11,7 +12,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <SimpleSidebar>
+    <Sidebar links={home.links} theme={home.theme}>
       <Grid
         gridTemplateRows={{
           sm: "100px1fr",
@@ -54,6 +55,6 @@ export default function Home() {
         </GridItem>
       </Grid>
       <Transition backgroundColor='#000'/>
-    </SimpleSidebar>
+    </Sidebar>
   )
 }

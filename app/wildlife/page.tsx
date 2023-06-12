@@ -2,14 +2,14 @@
 
 import { Gallery } from "@/component/Gallery/Gallery";
 import { Quote } from "@/component/Quote/Quote";
+import Sidebar from "@/component/Sidebar/Sidebar";
 import { wildlife } from "@/data";
 import StyledGallery from "@/styles/StyledGallery";
 import StyledScrollbar from "@/styles/StyledScrollbar";
-import LightSidebar from "@/template/light-sidebar";
 
 export default function Wildlife() {
   return (
-    <LightSidebar metadata={wildlife}>
+    <Sidebar isLight theme={wildlife.theme}>
       <StyledScrollbar color={wildlife.theme.scroll} />
       <StyledGallery>
         <Quote title={wildlife.title} quote={wildlife.quote} author={wildlife.author} />
@@ -21,7 +21,7 @@ export default function Wildlife() {
           alt="A building in Canary Wharf"
         />
       </StyledGallery>
-    </LightSidebar>
+    </Sidebar>
   )
 
 

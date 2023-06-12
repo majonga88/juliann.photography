@@ -1,13 +1,14 @@
 "use client"
 
 import { useScroll } from "framer-motion";
-import { Photo } from "../../../template/Photo";
 import { Progress } from "@/component/Progress/Progress";
+import { Photo } from "./Photo/Photo";
 
 export interface GalleryMetadata {
   theme: {
     background: string;
     font: string;
+    hover:string;
   },
   photos: PhotoMetadata[]
 }
@@ -22,10 +23,11 @@ interface Props {
   category: string;
   title: string;
   titleWidth: number;
+  hideTitleNumber: boolean;
   gallery: GalleryMetadata;
 }
 
-export function ContentGallery({ category, alt, title, titleWidth, gallery }: Props) {
+export function ContentGallery({ category, alt, title, titleWidth, hideTitleNumber, gallery }: Props) {
   
   const { scrollYProgress } = useScroll();
 
@@ -38,6 +40,7 @@ export function ContentGallery({ category, alt, title, titleWidth, gallery }: Pr
           alt={alt}
           title={title}
           titleFontColor={gallery.theme.font}
+          hideTitleNumber={hideTitleNumber}
           aspectRatio={aspectRatio}
         />
       ))}

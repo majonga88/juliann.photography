@@ -1,17 +1,17 @@
 import { PhotoMetadata } from "@/component/Gallery/Content/ContentGallery";
 import { Variants } from "framer-motion";
 
-export interface ContentGalleryMetadata {
-    title: string,
-    description?: string,
-    quote?: string,
-    author?: string,
+export interface Link {
+    name: string;
+    path: string;
+}
+
+export interface HomeMetadata {
+    links: Array<Link>,
     theme: {
         background: string;
         font: string;
         hover: string;
-        scroll?: string;
-        progress?: string;
         logo: string;
         variants: Variants;
     },
