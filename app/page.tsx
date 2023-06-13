@@ -35,7 +35,7 @@ export default function Home() {
         }}
         h='100vh'
       >
-        <GridItem area={'architecture'} >
+        <GridItem area={'architecture'}>
           <Tile tile={home.tiles[0]} />
         </GridItem>
         <GridItem area={'wildlife'}>

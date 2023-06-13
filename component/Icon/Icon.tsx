@@ -38,7 +38,7 @@ export function Icon({ href, theme, viewBox, width, height, path }: Props) {
             strokeLinecap="round"
             strokeLinejoin="round"
             width="100%"
-            whileHover={{ fill: theme.logo.hover, stroke: theme.logo.hover }}
+            whileHover={{ fill: theme.logo.hover, stroke: theme.logo.hover, transition: { duration: 0.3 } }}
           />
         </motion.svg>
       </motion.div>

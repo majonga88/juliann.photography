@@ -42,9 +42,9 @@ export const architecture: ContentGalleryMetadata = {
     }
   },
   photos: [
-    { title: 'Photo 1', aspectRatio: Direction.Horizontal, alt: '' },
-    { title: 'Photo 2', aspectRatio: Direction.Horizontal, alt: '' },
-    { title: 'Photo 3', aspectRatio: Direction.Horizontal, alt: '' }
+    { aspectRatio: Direction.Horizontal, alt: 'Photo 1' },
+    { aspectRatio: Direction.Horizontal, alt: 'Photo 2' },
+    { aspectRatio: Direction.Horizontal, alt: 'Photo 3' }
   ]
 };
 
@@ -68,9 +68,9 @@ export const wildlife: ContentGalleryMetadata = {
     }
   },
   photos: [
-    { title: 'Photo 1', aspectRatio: Direction.Horizontal, alt: '' },
-    { title: 'Photo 2', aspectRatio: Direction.Horizontal, alt: '' },
-    { title: 'Photo 3', aspectRatio: Direction.Horizontal, alt: '' }
+    { aspectRatio: Direction.Horizontal, alt: 'Photo 1' },
+    { aspectRatio: Direction.Horizontal, alt: 'Photo 2' },
+    { aspectRatio: Direction.Horizontal, alt: 'Photo 3' }
   ]
 };
 
@@ -94,9 +94,9 @@ export const nature: ContentGalleryMetadata = {
     }
   },
   photos: [
-    { title: 'Photo 1', aspectRatio: Direction.Horizontal, alt: '' },
-    { title: 'Photo 2', aspectRatio: Direction.Horizontal, alt: '' },
-    { title: 'Photo 3', aspectRatio: Direction.Horizontal, alt: '' }
+    { aspectRatio: Direction.Horizontal, alt: 'Photo 1' },
+    { aspectRatio: Direction.Horizontal, alt: 'Photo 2' },
+    { aspectRatio: Direction.Horizontal, alt: 'Photo 3' }
   ]
 };
 
@@ -120,9 +120,9 @@ export const lights: ContentGalleryMetadata = {
     }
   },
   photos: [
-    { title: 'Photo 1', aspectRatio: Direction.Vertical, alt: '' },
-    { title: 'Photo 2', aspectRatio: Direction.Horizontal, alt: '' },
-    { title: 'Photo 3', aspectRatio: Direction.Horizontal, alt: '' }
+    { aspectRatio: Direction.Vertical, alt: 'Photo 1' },
+    { aspectRatio: Direction.Horizontal, alt: 'Photo 2' },
+    { aspectRatio: Direction.Horizontal, alt: 'Photo 3' }
   ]
 };
 
@@ -146,9 +146,9 @@ export const citylife: ContentGalleryMetadata = {
     }
   },
   photos: [
-    { title: 'Photo 1', aspectRatio: Direction.Horizontal, alt: '' },
-    { title: 'Photo 2', aspectRatio: Direction.Vertical, alt: '' },
-    { title: 'Photo 3', aspectRatio: Direction.Vertical, alt: '' }
+    { aspectRatio: Direction.Horizontal, alt: 'Photo 1' },
+    { aspectRatio: Direction.Vertical, alt: 'Photo 2' },
+    { aspectRatio: Direction.Vertical, alt: 'Photo 3' }
   ]
 };
 
@@ -173,7 +173,7 @@ export const about: AboutMetadata = {
     }
   },
   photos: [
-    { title: 'Photo 1', aspectRatio: Direction.Horizontal, alt: '' },
+    { title: 'Photo 1', aspectRatio: Direction.Horizontal, alt: 'Photo 1' },
   ]
 };
 
@@ -182,7 +182,7 @@ export const home: HomeMetadata = {
     color: {
       background: 'rgb(0, 0, 0)',
       font: 'rgb(255, 255, 255)',
-      hover: 'rgb(255, 255, 255)',
+      hover: 'rgb(157, 180, 201)',
     },
     logo: {
       color: 'rgb(157, 180, 201)',

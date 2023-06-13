@@ -34,7 +34,9 @@ export default function Sidebar({ isLight, links, theme, children }: { isLight?:
     <Box minH="100vh" bg={theme.color.background} color={theme.color.font}>
       <SidebarContent
         onClose={() => onClose}
-        display={{ base: 'none', md: 'block' }} isLight={isLight || false} theme={theme} links={links} />
+        display={{ base: 'none', md: 'block' }} 
+        isLight={isLight || false} theme={theme} 
+        links={links} />
       {!isLight && <>
         <Drawer
           autoFocus={false}

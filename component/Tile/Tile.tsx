@@ -16,10 +16,11 @@ export interface SingleTileProps {
 export default function Tile({ tile }: SingleTileProps) {
 
     const [isHovered, setHovered] = useState(false);
+    const [isTaped, setTaped] = useState(false);
     const scaleValues = useBreakpointValue({ base: { scaleX: 0.9, scaleY: 0.9 }, sm: { scaleX: 0.9, scaleY: 0.9 }, md: { scaleX: 0.9, scaleY: 0.9 }, lg: { scaleX: 0.9, scaleY: 0.9 }});
 
     return (
-        <GridItem style={{ backgroundColor: isHovered ? '#ffffff' : '#000' }}>
+        <GridItem style={{ backgroundColor: isTaped ? '#ffffff' : '#000' }}>
             <Link href={tile.href || `/`}>
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}
                     style={{ overflow: 'hidden' }}
@@ -29,6 +30,8 @@ export default function Tile({ tile }: SingleTileProps) {
                         whileHover={{ scale: 1.1 }}
                         onHoverStart={() => setHovered(true)}
                         onHoverEnd={() => setHovered(false)}
+                        onTapStart={() => setTaped(true)}
+                        onTapEnd={() => setTaped(false)}
                         display="flex"
                         alignItems="top"
                         justifyContent="center"

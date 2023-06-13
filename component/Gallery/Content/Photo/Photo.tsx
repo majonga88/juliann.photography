@@ -13,10 +13,10 @@ const Image = forwardRef<HTMLDivElement, any>((props, ref) => (
 ));
 
 interface Props {
-  alt: string;
+  alt?: string;
   category: string;
   index: number;
-  title: string;
+  title?: string;
   titleFontColor: string;
   hideTitleNumber: boolean;
   aspectRatio?: string;

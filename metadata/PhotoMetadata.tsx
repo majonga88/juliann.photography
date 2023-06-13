@@ -1,9 +1,9 @@
 export interface PhotoMetadata {
-    title: string;
+    title?: string;
     titleColor?: string;
     href?: string;
-    imgLocation: string;
+    imgLocation?: string;
     aspectRatio?: string;
     delay?: number;
-    alt: string;
+    alt?: string;
 }
