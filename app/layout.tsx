@@ -4,7 +4,6 @@ import './globals.css'
 import { League_Spartan } from 'next/font/google'
 import { ColorModeScript } from "@chakra-ui/react"
 import Provider from "./provider"
-import StyledComponentsRegistry from '@/lib/registry'
 
 const inter = League_Spartan({ subsets: ['latin'] })
 
@@ -17,10 +16,8 @@ export default function RootLayout({
     <html lang="en" >
       <head />
       <body>
-        <StyledComponentsRegistry>
-          <ColorModeScript type="cookie" nonce="testing" />
-          <Provider>{children}</Provider>
-        </StyledComponentsRegistry>
+        <ColorModeScript type="cookie" nonce="testing" />
+        <Provider>{children}</Provider>
       </body>
     </html>
   )
