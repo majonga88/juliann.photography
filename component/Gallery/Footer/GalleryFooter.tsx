@@ -1,12 +1,19 @@
-import StyledFooter from "@/styles/StyledFooter";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { Flex, Text } from "@chakra-ui/react";
+import styled from "@emotion/styled";
 import Link from "next/link";
 
 interface Props {
     color: string,
     hoverColor: string
 }
+
+const StyledFooter = styled.footer({
+    padding: '100px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignSelf: 'center'
+});
 
 export function GalleryFooter({ color, hoverColor }: Props) {
     return (

@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useState } from "react";
 
-import styles from './Tile.module.css';
 import { PhotoMetadata } from "@/metadata/PhotoMetadata";
+import styled from "@emotion/styled";
 
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
@@ -12,6 +12,27 @@ const MotionText = motion(Text);
 export interface SingleTileProps {
     tile: PhotoMetadata;
 }
+
+const StyledMotionText = styled(MotionText)({
+    position: "absolute",
+    "@media screen and (max-width: 48em)" : {
+        fontSize: '1.875rem',
+        top: '2vw',
+        left: '6vw'
+    },
+    "@media screen and (min-width: 48em)": {
+        fontSize: '2.5rem',
+        top: '6vw',
+        writingMode: 'vertical-rl',
+        textOrientation: 'mixed'
+    },
+    "@media screen and (min-width: 62em)": {
+        fontSize: '2.5rem',
+        top: '6vw',
+        writingMode: 'vertical-rl',
+        textOrientation: 'mixed'
+    }
+})
 
 export default function Tile({ tile }: SingleTileProps) {
 
@@ -37,14 +58,14 @@ export default function Tile({ tile }: SingleTileProps) {
                         justifyContent="center"
                     >
                         <Image src={tile.imgLocation} width={'100%'} height={{ base: '20vh', md: '100vh', lg: '100vh' }} objectFit={'cover'} alt={tile.alt} />
-                        <MotionText className={styles.title}
+                        <StyledMotionText
                             initial={{ opacity: 0 }}
                             animate={{ opacity: isHovered ? 1 : 0 }}
                             transition={{ duration: 0.5 }}
                             color={tile.titleColor || "rgb(255, 255, 255)"}
                         >
                             {tile.title}
-                        </MotionText>
+                        </StyledMotionText>
                     </MotionBox >
                 </motion.div>
             </Link>

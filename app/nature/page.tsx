@@ -1,11 +1,11 @@
 "use client"
 
 import { Gallery } from "@/component/Gallery/Gallery";
+import StyledGallery from "@/component/Gallery/StyledGallery";
 import { Quote } from "@/component/Quote/Quote";
+import StyledScrollbar from "@/component/Scrollbar/StyledScrollbar";
 import Sidebar from "@/component/Sidebar/Sidebar";
 import { nature } from "@/data";
-import StyledGallery from "@/styles/StyledGallery";
-import StyledScrollbar from "@/styles/StyledScrollbar";
 
 export default function Nature() {
   return (
@@ -15,7 +15,7 @@ export default function Nature() {
         <Quote title={nature.title} quote={nature.quote} author={nature.author} />
         <Gallery
           gallery={nature}
-          category="nature"
+          category={nature.title.toLowerCase()}
         />
       </StyledGallery>
     </Sidebar>

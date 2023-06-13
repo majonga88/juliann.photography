@@ -8,9 +8,10 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { useMediaQuery } from "@chakra-ui/react";
-import { SidebarContent } from '@/component/Sidebar/SideContent';
+import { SidebarContent } from '@/component/Sidebar/SidebarContent';
 import { MobileNav } from '@/component/Sidebar/MobileNav/MobileNav';
 import { ThemeProps } from '@/metadata/ThemeMetadata';
+import styled from '@emotion/styled';
 
 interface LinkProps {
   name: string;
@@ -19,6 +20,7 @@ interface LinkProps {
 
 export default function Sidebar({ isLight, links, theme, children }: { isLight?: boolean, links?: Array<LinkProps>, theme: ThemeProps, children: ReactNode }) {
   
+  const lightMode = isLight || false;
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   if (!isLight) {
@@ -35,7 +37,7 @@ export default function Sidebar({ isLight, links, theme, children }: { isLight?:
       <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }} 
-        isLight={isLight || false} theme={theme} 
+        isLight={lightMode} theme={theme} 
         links={links} />
       {!isLight && <>
         <Drawer
@@ -47,14 +49,11 @@ export default function Sidebar({ isLight, links, theme, children }: { isLight?:
           onOverlayClick={onClose}
           size="full">
           <DrawerContent>
-            <SidebarContent isLight={isLight || false} onClose={onClose} theme={theme} links={links} />
+            <SidebarContent isLight={lightMode} onClose={onClose} theme={theme} links={links} />
           </DrawerContent>
         </Drawer>
-        <MobileNav display={{ base: 'flex', md: 'none' }} width={{
-          base: '100%',
-          sm: '80%',
-        }} theme={theme} onOpen={onOpen} />
       </>}
+      <MobileNav isLight={lightMode} theme={theme} onOpen={onOpen} />
       <Box ml={{ base: 0, md: 260, lg: 360 }}>
         {children}
       </Box>

@@ -5,7 +5,7 @@ import { useRef, forwardRef, useCallback} from "react";
 import { useMeasure } from 'react-use';
 
 import { Box, Image as ChakraImage } from '@chakra-ui/react'
-import StyledHeader from "@/styles/StyledHeader";
+import styled from "@emotion/styled";
 
 const Image = forwardRef<HTMLDivElement, any>((props, ref) => (
   <div ref={ref}>
@@ -22,6 +22,16 @@ interface Props {
   hideTitleNumber: boolean;
   aspectRatio?: string;
 }
+
+const StyledHeader = styled(motion.h2)({
+  fontSize: '4vw',
+  left: 'calc(56vw)',
+  top: 'calc(70vh)',
+  fontWeight: '700',
+  letterSpacing: '-3px',
+  lineHeight: '1.8',
+  position: 'absolute'
+})
 
 export function Photo({ alt, category, index, title, titleFontColor, hideTitleNumber, aspectRatio }: Props) {
   const ref = useRef(null);

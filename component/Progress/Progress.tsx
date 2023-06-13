@@ -1,11 +1,20 @@
 import { motion, useSpring } from "framer-motion";
 
-import styles from './Progress.module.css';
+import styled from "@emotion/styled";
 
 interface Props {
     scrollYProgress: any,
     background: string
 }
+
+const StyledProgress = styled(motion.div)({
+    position: 'fixed',
+    display: 'flex',
+    left: '0',
+    right: '0',
+    top: '0',
+    height: '0.4em'
+})
 
 export function Progress({ scrollYProgress, background }: Props) {
 
@@ -16,6 +25,6 @@ export function Progress({ scrollYProgress, background }: Props) {
       });
 
     return (
-        <motion.div className={styles.progress} style={{ scaleX, background: background }} />
+        <StyledProgress style={{ scaleX, background: background }} />
     )
 }

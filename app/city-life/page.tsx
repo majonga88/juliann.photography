@@ -4,8 +4,8 @@ import { Gallery } from "@/component/Gallery/Gallery";
 import { Quote } from "@/component/Quote/Quote";
 import Sidebar from "@/component/Sidebar/Sidebar";
 import { citylife } from "@/data";
-import StyledGallery from "@/styles/StyledGallery";
-import StyledScrollbar from "@/styles/StyledScrollbar";
+import StyledGallery from "@/component/Gallery/StyledGallery";
+import StyledScrollbar from "@/component/Scrollbar/StyledScrollbar";
 
 export default function Citylife() {
   return (
@@ -15,7 +15,7 @@ export default function Citylife() {
         <Quote title={citylife.title} quote={citylife.quote} author={citylife.author} />
         <Gallery
           gallery={citylife}
-          category="city-life"
+          category={citylife.title.toLowerCase()}
         />
       </StyledGallery>
     </Sidebar>

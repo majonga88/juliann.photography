@@ -27,7 +27,7 @@ export function Quote({ title, description, quote, author }: Props) {
     return (
         <Grid gap={6}>
             <GridItem w="100%">
-                <Heading as={'h1'} size={headingSize} className={ls400.className} lineHeight={'1.25'}>{title}</Heading>
+                <Heading as={'h1'} size={headingSize} className={ls400.className} lineHeight={'1.25'} fontFamily={''} fontWeight={'400'}>{title}</Heading>
             </GridItem>
             {description && description.map((descriptionItem) => (
             <GridItem w="100%">

@@ -41,7 +41,7 @@ export function SidebarContent({ onClose, isLight, theme, links, ...rest }: Prop
                 {!isLight && <CloseButton display={{ base: 'flex', md: 'none' }} bg={theme.color.font} onClick={onClose} />}
             </Flex>
             {!isLight && links && links.map((link) => (
-                <NavItem key={link.name} path={link.path} fontSize="2.5rem" fontWeight="300" color={theme.color.font} hoverColor={theme.color.hover}>
+                <NavItem key={link.name} path={link.path} color={theme.color.font} hoverColor={theme.color.hover}>
                     {link.name}
                 </NavItem>
             ))}

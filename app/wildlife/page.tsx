@@ -4,8 +4,8 @@ import { Gallery } from "@/component/Gallery/Gallery";
 import { Quote } from "@/component/Quote/Quote";
 import Sidebar from "@/component/Sidebar/Sidebar";
 import { wildlife } from "@/data";
-import StyledGallery from "@/styles/StyledGallery";
-import StyledScrollbar from "@/styles/StyledScrollbar";
+import StyledGallery from "@/component/Gallery/StyledGallery";
+import StyledScrollbar from "@/component/Scrollbar/StyledScrollbar";
 
 export default function Wildlife() {
   return (
@@ -15,7 +15,7 @@ export default function Wildlife() {
         <Quote title={wildlife.title} quote={wildlife.quote} author={wildlife.author} />
         <Gallery
           gallery={wildlife}
-          category="wildlife"
+          category={wildlife.title.toLowerCase()}
         />
       </StyledGallery>
     </Sidebar>

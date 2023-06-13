@@ -4,8 +4,8 @@ import { Gallery } from "@/component/Gallery/Gallery";
 import { Quote } from "@/component/Quote/Quote";
 import Sidebar from "@/component/Sidebar/Sidebar";
 import { lights } from "@/data";
-import StyledGallery from "@/styles/StyledGallery";
-import StyledScrollbar from "@/styles/StyledScrollbar";
+import StyledGallery from "@/component/Gallery/StyledGallery";
+import StyledScrollbar from "@/component/Scrollbar/StyledScrollbar";
 
 export default function Lights() {
   return (
@@ -15,7 +15,7 @@ export default function Lights() {
         <Quote title={lights.title} quote={lights.quote} author={lights.author} />
         <Gallery
           gallery={lights}
-          category="lights"
+          category={lights.title.toLowerCase()}
         />
       </StyledGallery>
     </Sidebar>
