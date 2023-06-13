@@ -1,11 +1,7 @@
 "use client"
 
-import './globals.css'
-import { League_Spartan } from 'next/font/google'
 import { ColorModeScript } from "@chakra-ui/react"
 import Provider from "./provider"
-
-const inter = League_Spartan({ subsets: ['latin'] })
 
 export default function RootLayout({
   children,

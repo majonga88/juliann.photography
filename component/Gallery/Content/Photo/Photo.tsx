@@ -1,10 +1,11 @@
 "use client"
 
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import { MotionValue, motion, useTransform, useViewportScroll } from "framer-motion";
 import { useRef, forwardRef, useCallback} from "react";
 import { useMeasure } from 'react-use';
 
 import { Box, Image as ChakraImage } from '@chakra-ui/react'
+import StyledHeader from "@/styles/StyledHeader";
 
 const Image = forwardRef<HTMLDivElement, any>((props, ref) => (
   <div ref={ref}>
@@ -36,16 +37,16 @@ export function Photo({ alt, category, index, title, titleFontColor, hideTitleNu
   }, []);
 
   // Create an offset value based on the index of the element
-  const offset = index * 0.02;
+  const offset: number = index * 0.02;
 
   // Get image height in pixels
-  const imageHeight = bounds.height ?? 0; // Use a default value (0) if bounds.height is undefined
+  const imageHeight: number = bounds.height ?? 0; // Use a default value (0) if bounds.height is undefined
 
   // Apply the offset to the scrollYProgress value, making the title move downwards as the page scrolls up, and stopping when it reaches the top
-  const y = useTransform(scrollYProgress, [0, 1], [imageHeight, 0]);
+  const y: MotionValue = useTransform(scrollYProgress, [0, 1], [imageHeight, 0]);
 
   // Calculate the dynamic height based on the aspect ratio
-  const dynamicHeight = aspectRatio === "vertical" ? "auto" : undefined;
+  const dynamicHeight: string | undefined = aspectRatio === "vertical" ? "auto" : undefined;
 
   return (
     <Box ref={setRefs} style={{ position: 'relative', height: dynamicHeight, overflow: 'hidden', margin: '1.5em' }}>
@@ -53,7 +54,7 @@ export function Photo({ alt, category, index, title, titleFontColor, hideTitleNu
         <Image src={`/${category}/${category}-${index}.jpg`} alt={alt} style={{ width: '50em', display: 'block' }}/>
       </Box>
       {!hideTitleNumber && (
-        <motion.h2 
+        <StyledHeader 
           style={{ 
             y, 
             color: titleFontColor, 
@@ -65,7 +66,7 @@ export function Photo({ alt, category, index, title, titleFontColor, hideTitleNu
           }}
         >
           {`#00${index}`}
-        </motion.h2>
+        </StyledHeader>
       )}
     </Box>
   );
