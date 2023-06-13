@@ -1,7 +1,6 @@
 "use client"
 
 import React, { ReactNode, useEffect } from 'react'
-import { Variants } from 'framer-motion';
 import {
   Box,
   Drawer,
@@ -11,20 +10,11 @@ import {
 import { useMediaQuery } from "@chakra-ui/react";
 import { SidebarContent } from '@/component/Sidebar/SideContent';
 import { MobileNav } from '@/component/Sidebar/MobileNav/MobileNav';
+import { ThemeProps } from '@/metadata/ThemeMetadata';
 
 interface LinkProps {
   name: string;
   path: string;
-}
-
-interface ThemeProps {
-  background: string;
-  font: string;
-  hover: string;
-  scroll?: string;
-  progress?: string;
-  logo: string;
-  variants: Variants;
 }
 
 export default function Sidebar({ isLight, links, theme, children }: { isLight?: boolean, links?: Array<LinkProps>, theme: ThemeProps, children: ReactNode }) {
@@ -41,7 +31,7 @@ export default function Sidebar({ isLight, links, theme, children }: { isLight?:
   }
 
   return (
-    <Box minH="100vh" bg={theme.background} color={theme.font}>
+    <Box minH="100vh" bg={theme.color.background} color={theme.color.font}>
       <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }} isLight={isLight || false} theme={theme} links={links} />

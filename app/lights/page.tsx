@@ -10,15 +10,12 @@ import StyledScrollbar from "@/styles/StyledScrollbar";
 export default function Lights() {
   return (
     <Sidebar isLight theme={lights.theme}>
-      <StyledScrollbar color={lights.theme.scroll} />
+      <StyledScrollbar color={lights.theme.color.scroll} />
       <StyledGallery>
         <Quote title={lights.title} quote={lights.quote} author={lights.author} />
         <Gallery
           gallery={lights}
-          title="White lines of Canary Wharf"
-          titleWidth={8}
           category="lights"
-          alt="A building in Canary Wharf"
         />
       </StyledGallery>
     </Sidebar>

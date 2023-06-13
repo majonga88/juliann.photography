@@ -1,5 +1,5 @@
-import { PhotoMetadata } from "@/component/Gallery/Content/ContentGallery";
-import { Variants } from "framer-motion";
+import { PhotoMetadata } from "./PhotoMetadata";
+import { ThemeProps } from "./ThemeMetadata";
 
 export interface Link {
     name: string;
@@ -8,12 +8,6 @@ export interface Link {
 
 export interface HomeMetadata {
     links: Array<Link>,
-    theme: {
-        background: string;
-        font: string;
-        hover: string;
-        logo: string;
-        variants: Variants;
-    },
-    photos: PhotoMetadata[]
+    theme: ThemeProps,
+    tiles: PhotoMetadata[]
 }

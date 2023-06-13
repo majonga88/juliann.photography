@@ -14,12 +14,10 @@ export default function About() {
             <StyledGallery>
                 <Quote title={about.title} description={about.description} author={about.author} />
                 <Gallery
-          gallery={about}
-          title="White lines of Canary Wharf"
-          titleWidth={8}
-          category="about"
-          alt="A building in Canary Wharf"
-        />
+                    gallery={about}
+                    category="about"
+                    hideTitleNumber
+                />
             </StyledGallery>
         </Sidebar>
     )

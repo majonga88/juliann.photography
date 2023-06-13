@@ -1,9 +1,9 @@
 import { PhotoMetadata } from "./PhotoMetadata";
 import { ThemeProps } from "./ThemeMetadata";
 
-export interface ContentGalleryMetadata {
+export interface AboutMetadata {
     title: string,
-    description?: string,
+    description?: Array<string>,
     quote?: string,
     author?: string,
     theme: ThemeProps,

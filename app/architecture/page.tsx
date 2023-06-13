@@ -11,16 +11,12 @@ import StyledScrollbar from "@/styles/StyledScrollbar";
 export default function Architecture() {
   return (
     <Sidebar isLight theme={architecture.theme}>
-      <StyledScrollbar color={architecture.theme.scroll} />
+      <StyledScrollbar color={architecture.theme.color.scroll} />
       <StyledGallery>
         <Quote title={architecture.title} quote={architecture.quote} author={architecture.author}/>
         <Gallery
           gallery={architecture}
-          title="White lines of Canary Wharf"
-          titleWidth={8}
-          hideTitleNumber={false}
           category="architecture"
-          alt="A building in Canary Wharf"
         />
       </StyledGallery>
     </Sidebar>

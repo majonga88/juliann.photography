@@ -1,12 +1,7 @@
-import { Variants } from "framer-motion";
 import { ContentGalleryMetadata } from "./ContentGalleryMetadata";
+import { ThemeProps } from "./ThemeMetadata";
 
 export interface GalleryMetadata {
-    theme: {
-      background: string;
-      font: string;
-      hover: string;
-      variants: Variants;
-    },
+    theme: ThemeProps,
     galleries: ContentGalleryMetadata[]
   }

@@ -3,7 +3,7 @@ import { League_Spartan, Work_Sans } from "next/font/google";
 
 interface Props {
     title: string,
-    description?: string,
+    description?: Array<string>,
     quote?: string,
     author?: string
 }
@@ -29,11 +29,12 @@ export function Quote({ title, description, quote, author }: Props) {
             <GridItem w="100%">
                 <Heading as={'h1'} size={headingSize} className={ls400.className} lineHeight={'1.25'}>{title}</Heading>
             </GridItem>
-            {description && <GridItem w="100%">
+            {description && description.map((descriptionItem) => (
+            <GridItem w="100%">
                 <Flex className={ws300.className} fontSize={quoteSize} lineHeight={'1.25'}>
-                    {description}
+                    {descriptionItem}
                 </Flex>
-            </GridItem>}
+            </GridItem>))}
             {quote && <GridItem w="100%">
                 <Flex className={ws300.className} fontSize={quoteSize} lineHeight={'1.25'}>
                     <i>
