@@ -1,6 +1,6 @@
 "use client"
 
-import { MotionValue, motion, useTransform, useViewportScroll } from "framer-motion";
+import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
 import { useRef, forwardRef, useCallback} from "react";
 import { useMeasure } from 'react-use';
 
@@ -35,7 +35,7 @@ const StyledHeader = styled(motion.h2)({
 
 export function Photo({ alt, category, index, title, titleFontColor, hideTitleNumber, aspectRatio }: Props) {
   const ref = useRef(null);
-  const { scrollYProgress } = useViewportScroll();
+  const { scrollYProgress } = useScroll();
 
   const [measureRef, bounds] = useMeasure<HTMLDivElement>();  // add this
 
