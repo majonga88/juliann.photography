@@ -13,6 +13,8 @@ const Image = forwardRef<HTMLDivElement, any>((props, ref) => (
   </div>
 ));
 
+Image.displayName = 'Image';
+
 interface Props {
   alt?: string;
   category: string;
@@ -44,7 +46,7 @@ export function Photo({ alt, category, index, title, titleFontColor, hideTitleNu
     if (typeof measureRef === 'function') {
       measureRef(node);
     }
-  }, []);
+  }, [measureRef]);
 
   // Create an offset value based on the index of the element
   const offset: number = index * 0.02;

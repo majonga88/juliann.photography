@@ -22,9 +22,7 @@ export function SidebarContent({ onClose, isLight, theme, links, ...rest }: Prop
     const marginX = useBreakpointValue({ base: "2", sm: "2", md: "2", lg: "8" })
     const gap = useBreakpointValue({ base: "6", sm: "6", md: "4", lg: "5" })
 
-    const width = isLight ?
-        useBreakpointValue({ base: 0, md: 130, lg: 230 })
-        : useBreakpointValue({ base: 'full', md: 260, lg: 360 })
+    const width = useBreakpointValue(isLight ? { base: 0, md: 130, lg: 230 } : { base: 'full', md: 260, lg: 360 })
 
     return (
         <Box

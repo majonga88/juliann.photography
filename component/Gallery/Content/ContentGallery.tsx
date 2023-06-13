@@ -24,7 +24,7 @@ export function ContentGallery({ category, hideTitleNumber, gallery }: Props) {
   return (
     <>
       {gallery.photos.map(({ title, aspectRatio, alt }, index) => (
-        <Photo
+        <Photo key={index}
           category={category}
           index={index + 1}
           alt={alt}
