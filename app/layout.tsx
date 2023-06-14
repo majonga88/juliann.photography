@@ -2,7 +2,7 @@
 
 import { ColorModeScript } from "@chakra-ui/react";
 import Provider from "./provider";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
 export default function RootLayout({
   children,
