@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useScroll } from "framer-motion";
 import { Progress } from "@/component/Progress/Progress";
@@ -7,8 +7,8 @@ import { ThemeProps } from "@/metadata/ThemeMetadata";
 import { PhotoMetadata } from "@/metadata/PhotoMetadata";
 
 export interface GalleryMetadata {
-  theme: ThemeProps,
-  photos: PhotoMetadata[]
+  theme: ThemeProps;
+  photos: PhotoMetadata[];
 }
 
 interface Props {
@@ -18,13 +18,13 @@ interface Props {
 }
 
 export function ContentGallery({ category, hideTitleNumber, gallery }: Props) {
-  
   const { scrollYProgress } = useScroll();
 
   return (
     <>
       {gallery.photos.map(({ title, aspectRatio, alt }, index) => (
-        <Photo key={index}
+        <Photo
+          key={index}
           category={category}
           index={index + 1}
           alt={alt}
@@ -34,7 +34,10 @@ export function ContentGallery({ category, hideTitleNumber, gallery }: Props) {
           aspectRatio={aspectRatio}
         />
       ))}
-      <Progress scrollYProgress={scrollYProgress} background={gallery.theme.color.background} />
+      <Progress
+        scrollYProgress={scrollYProgress}
+        background={gallery.theme.color.background}
+      />
     </>
   );
 }

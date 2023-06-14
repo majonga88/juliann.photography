@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Gallery } from "@/component/Gallery/Gallery";
 import { Quote } from "@/component/Quote/Quote";
@@ -12,14 +12,13 @@ export default function Wildlife() {
     <Sidebar isLight theme={wildlife.theme}>
       <StyledScrollbar color={wildlife.theme.color.scroll} />
       <StyledGallery>
-        <Quote title={wildlife.title} quote={wildlife.quote} author={wildlife.author} />
-        <Gallery
-          gallery={wildlife}
-          category={wildlife.title.toLowerCase()}
+        <Quote
+          title={wildlife.title}
+          quote={wildlife.quote}
+          author={wildlife.author}
         />
+        <Gallery gallery={wildlife} category={wildlife.title.toLowerCase()} />
       </StyledGallery>
     </Sidebar>
-  )
-
-
+  );
 }

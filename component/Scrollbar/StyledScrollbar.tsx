@@ -1,4 +1,4 @@
-import { Global, css } from '@emotion/react';
+import { Global, css } from "@emotion/react";
 
 interface Props {
   color?: string;
@@ -15,12 +15,12 @@ const StyledScrollbar = ({ color }: Props) => (
       }
 
       ::-webkit-scrollbar-thumb {
-        background: ${color || 'var(--accent)'};
+        background: ${color || "var(--accent)"};
         -webkit-border-radius: 1ex;
       }
 
       ::-webkit-scrollbar-corner {
-        background: ${color || '#fff3'};
+        background: ${color || "#fff3"};
       }
     `}
   />

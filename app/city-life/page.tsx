@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Gallery } from "@/component/Gallery/Gallery";
 import { Quote } from "@/component/Quote/Quote";
@@ -12,14 +12,13 @@ export default function Citylife() {
     <Sidebar isLight theme={citylife.theme}>
       <StyledScrollbar color={citylife.theme.color.scroll} />
       <StyledGallery>
-        <Quote title={citylife.title} quote={citylife.quote} author={citylife.author} />
-        <Gallery
-          gallery={citylife}
-          category={citylife.title.toLowerCase()}
+        <Quote
+          title={citylife.title}
+          quote={citylife.quote}
+          author={citylife.author}
         />
+        <Gallery gallery={citylife} category={citylife.title.toLowerCase()} />
       </StyledGallery>
     </Sidebar>
-  )
-
-
+  );
 }

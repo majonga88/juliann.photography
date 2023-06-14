@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Gallery } from "@/component/Gallery/Gallery";
 import { Quote } from "@/component/Quote/Quote";
@@ -12,14 +12,13 @@ export default function Lights() {
     <Sidebar isLight theme={lights.theme}>
       <StyledScrollbar color={lights.theme.color.scroll} />
       <StyledGallery>
-        <Quote title={lights.title} quote={lights.quote} author={lights.author} />
-        <Gallery
-          gallery={lights}
-          category={lights.title.toLowerCase()}
+        <Quote
+          title={lights.title}
+          quote={lights.quote}
+          author={lights.author}
         />
+        <Gallery gallery={lights} category={lights.title.toLowerCase()} />
       </StyledGallery>
     </Sidebar>
-  )
-
-
+  );
 }
