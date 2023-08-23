@@ -36,7 +36,7 @@ export function ContentGallery({ category, hideTitleNumber, gallery }: Props) {
       ))}
       <Progress
         scrollYProgress={scrollYProgress}
-        background={gallery.theme.color.background}
+        background={gallery.theme.color.progress}
       />
     </>
   );

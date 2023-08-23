@@ -47,8 +47,8 @@ export function Quote({ title, description, quote, author }: Props) {
         description.map((descriptionItem, index) => (
           <GridItem w="100%" key={index}>
             <Flex
-              className={ws300.className}
-              fontSize={quoteSize}
+              className={ls400.className}
+              fontSize={"1.8rem"}
               lineHeight={"1.25"}
             >
               {descriptionItem}
@@ -58,11 +58,11 @@ export function Quote({ title, description, quote, author }: Props) {
       {quote && (
         <GridItem w="100%">
           <Flex
-            className={ws300.className}
-            fontSize={quoteSize}
+            className={ls400.className}
+            fontSize={"1.8rem"}
             lineHeight={"1.25"}
           >
-            <i>{quote}</i>
+            {quote}
           </Flex>
         </GridItem>
       )}
@@ -71,12 +71,12 @@ export function Quote({ title, description, quote, author }: Props) {
           <Flex
             pb={10}
             pe={8}
-            className={ws300.className}
+            className={ls400.className}
             fontSize={authorSize}
             lineHeight={"1.25"}
             justifyContent="flex-end"
           >
-            <i>{author}</i>
+            {author}
           </Flex>
         </GridItem>
       )}

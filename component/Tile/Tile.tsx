@@ -11,9 +11,15 @@ import React, { useState } from "react";
 
 import { PhotoMetadata } from "@/metadata/PhotoMetadata";
 import styled from "@emotion/styled";
+import { League_Spartan } from "next/font/google";
 
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
+
+const ls400 = League_Spartan({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export interface SingleTileProps {
   tile: PhotoMetadata;
@@ -23,17 +29,20 @@ const StyledMotionText = styled(MotionText)({
   position: "absolute",
   "@media screen and (max-width: 48em)": {
     fontSize: "1.875rem",
+    fontWeight: "400",
     top: "2vw",
     left: "6vw",
   },
   "@media screen and (min-width: 48em)": {
     fontSize: "2.5rem",
+    fontWeight: "400",
     top: "6vw",
     writingMode: "vertical-rl",
     textOrientation: "mixed",
   },
   "@media screen and (min-width: 62em)": {
     fontSize: "2.5rem",
+    fontWeight: "400",
     top: "6vw",
     writingMode: "vertical-rl",
     textOrientation: "mixed",
@@ -82,10 +91,9 @@ export default function Tile({ tile }: SingleTileProps) {
               alt={tile.alt}
             />
             <StyledMotionText
-              initial={{ opacity: 0 }}
-              animate={{ opacity: isHovered ? 1 : 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 1 }}
               color={tile.titleColor || "rgb(255, 255, 255)"}
+              className={ls400.className}
             >
               {tile.title}
             </StyledMotionText>

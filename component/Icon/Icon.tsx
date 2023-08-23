@@ -13,12 +13,6 @@ interface Props {
 
 export function Icon({ href, theme, viewBox, width, height, path }: Props) {
   return (
-    <Link
-      href={href || "/"}
-      style={{ textDecoration: "none" }}
-      _focus={{ boxShadow: "none" }}
-    >
-      <motion.div style={{ display: "inline-block" }}>
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox={viewBox}
@@ -47,7 +41,5 @@ export function Icon({ href, theme, viewBox, width, height, path }: Props) {
             }}
           />
         </motion.svg>
-      </motion.div>
-    </Link>
   );
 }

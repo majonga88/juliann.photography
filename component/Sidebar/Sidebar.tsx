@@ -6,7 +6,6 @@ import { useMediaQuery } from "@chakra-ui/react";
 import { SidebarContent } from "@/component/Sidebar/SidebarContent";
 import { MobileNav } from "@/component/Sidebar/MobileNav/MobileNav";
 import { ThemeProps } from "@/metadata/ThemeMetadata";
-import styled from "@emotion/styled";
 
 interface LinkProps {
   name: string;

@@ -25,15 +25,15 @@ const loadVariantsForLogo = (color: string) => {
 export const architecture: ContentGalleryMetadata = {
   title: "Architecture",
   quote:
-    "Architecture is like writing. You have to edit it over and over so it looks effortless",
-  author: "- Zaha Hadid",
+    "Architecture is like writing. You have to edit it over and over so it looks effortless.",
+  author: "_ Zaha Hadid.",
   theme: {
     color: {
       background: "rgb(133, 203, 231)",
       font: "rgb(255, 255, 255)",
       hover: "rgb(0, 0, 0)",
       progress: "rgb(133, 203, 231)",
-      scroll: "rgb(133, 203, 231)",
+      scroll: "rgb(89, 142, 163)",
     },
     logo: {
       color: "rgb(255, 255, 255)",
@@ -52,15 +52,15 @@ export const architecture: ContentGalleryMetadata = {
 export const wildlife: ContentGalleryMetadata = {
   title: "Wildlife",
   quote:
-    "Each species is a masterpiece, a creation assembled with extreme care and genius",
-  author: "– Edward O. Wilson",
+    "Each species is a masterpiece, a creation assembled with extreme care and genius.",
+  author: "_ Edward O. Wilson.",
   theme: {
     color: {
-      background: "rgb(133, 203, 231)",
+      background: "rgb(144, 189, 223)",
       font: "rgb(255, 255, 255)",
       hover: "rgb(0, 0, 0)",
-      progress: "rgb(133, 203, 231)",
-      scroll: "rgb(133, 203, 231)",
+      progress: "rgb(144, 189, 223)",
+      scroll: "rgb(144, 189, 223)",
     },
     logo: {
       color: "rgb(255, 255, 255)",
@@ -79,15 +79,15 @@ export const wildlife: ContentGalleryMetadata = {
 export const nature: ContentGalleryMetadata = {
   title: "Nature",
   quote:
-    "People must feel that the natural world is important and valuable and beautiful and wonderful and an amazement and a pleasure",
-  author: "– David Attenborough",
+    "People must feel that the natural world is important and valuable and beautiful and wonderful and an amazement and a pleasure.",
+  author: "_ Sir David Attenborough.",
   theme: {
     color: {
-      background: "rgb(133, 203, 231)",
+      background: "rgb(246, 192, 142)",
       font: "rgb(0, 0, 0)",
       hover: "rgb(255, 255, 255)",
-      progress: "rgb(133, 203, 231)",
-      scroll: "rgb(133, 203, 231)",
+      progress: "rgb(246, 192, 142)",
+      scroll: "rgb(246, 192, 142)",
     },
     logo: {
       color: "rgb(0, 0, 0)",
@@ -107,7 +107,7 @@ export const lights: ContentGalleryMetadata = {
   title: "Lights",
   quote:
     "There are darknesses in life and there are lights, and you are one of the lights, the light of all lights.",
-  author: "– Bram Stoker",
+  author: "_ Bram Stoker.",
   theme: {
     color: {
       background: "rgb(135, 160, 172)",
@@ -134,14 +134,14 @@ export const citylife: ContentGalleryMetadata = {
   title: "City-life",
   quote:
     "A city is a place where there is no need to wait for next week to get the answer to a question, to taste the food of any country, to find new voices to listen to and familiar ones to listen to again.",
-  author: "– Margaret Mead",
+  author: "_ Margaret Mead.",
   theme: {
     color: {
-      background: "rgb(133, 203, 231)",
+      background: "rgb(219, 187, 119)",
       font: "rgb(0, 0, 0)",
       hover: "rgb(255, 255, 255)",
-      progress: "rgb(133, 203, 231)",
-      scroll: "rgb(133, 203, 231)",
+      progress: "rgb(219, 187, 119)",
+      scroll: "rgb(219, 187, 119)",
     },
     logo: {
       color: "rgb(0, 0, 0)",
@@ -160,10 +160,10 @@ export const citylife: ContentGalleryMetadata = {
 export const about: AboutMetadata = {
   title: "About",
   description: [
-    "To me, the photography represent one the most sophisticated, elegeant and iconic style. This is the art of expression.",
-    "Passionate for nature and architecture, I traveled to different part of the world to capture moments, make them intense and memorable to everyone.",
+    "To me, photography epitomizes one of the pinnacle manifestations of sophistication, elegance, and iconic flair. It is an undeniable form of artistic expression.",
+    "Infatuated with the raw beauty of nature and the majestic grandeur of architecture, I've journeyed across diverse terrains and cultures around the globe to immortalize fleeting moments, rendering them profoundly poignant and eternally memorable for all who witness them.",
   ],
-  author: "– Julian.",
+  author: "_ Julian.",
   theme: {
     color: {
       background: "rgb(0, 0, 0)",

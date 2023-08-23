@@ -1,12 +1,18 @@
 import { ArrowBackIcon } from "@chakra-ui/icons";
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import { League_Spartan } from "next/font/google";
 import Link from "next/link";
 
 interface Props {
   color: string;
   hoverColor: string;
 }
+
+const ls400 = League_Spartan({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const StyledFooter = styled.footer({
   padding: "100px",
@@ -16,16 +22,18 @@ const StyledFooter = styled.footer({
 });
 
 export function GalleryFooter({ color, hoverColor }: Props) {
+
+  const [isSmallerThanMd] = useMediaQuery("(max-width: 48em)");
+
   return (
     <StyledFooter>
-      <Link href="/" style={{ color: color }}>
+      { isSmallerThanMd && (<Link href="/" style={{ color: color }}>
         <Flex alignItems={"center"} _hover={{ color: hoverColor }}>
           <ArrowBackIcon w={8} h={8} />
-          <Text fontSize={"4.5rem"} margin={"6rem"}>
+          <Text fontSize={"4.5rem"} margin={"6rem"} className={ls400.className}>
             Back to galleries
           </Text>
         </Flex>
-      </Link>
-    </StyledFooter>
-  );
+      </Link>)}
+    </StyledFooter>);
 }

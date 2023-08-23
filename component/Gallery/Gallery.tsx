@@ -10,7 +10,7 @@ interface Props {
 
 export function Gallery({ category, hideTitleNumber, gallery }: Props) {
   return (
-    <>
+    <div>
       <ContentGallery
         category={category}
         hideTitleNumber={hideTitleNumber || false}
@@ -21,6 +21,6 @@ export function Gallery({ category, hideTitleNumber, gallery }: Props) {
         hoverColor={gallery.theme.color.hover}
       />
       <Transition backgroundColor={gallery.theme.color.background} />
-    </>
+    </div>
   );
 }

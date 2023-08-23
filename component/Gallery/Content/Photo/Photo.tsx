@@ -6,6 +6,7 @@ import { useMeasure } from "react-use";
 
 import { Box, Image as ChakraImage } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import { League_Spartan } from "next/font/google";
 
 const Image = forwardRef<HTMLDivElement, any>((props, ref) => (
   <div ref={ref}>
@@ -27,7 +28,7 @@ interface Props {
 
 const StyledHeader = styled(motion.h2)({
   fontSize: "4vw",
-  left: "calc(56vw)",
+  left: "calc(48vw)",
   top: "calc(70vh)",
   fontWeight: "700",
   letterSpacing: "-3px",
@@ -100,9 +101,11 @@ export function Photo({
             color: titleFontColor,
             position: "absolute",
             top: 0,
-            width: "100%",
-            zIndex: 10,
-            background: "rgba(0,0,0,0.5)", // for visibility, remove if not needed
+            zIndex: 99999,
+            paddingRight: "1%",
+            paddingLeft: "1%",
+            borderRadius: "10%",
+            background: "rgba(0,0,0,0.5)",
           }}
         >
           {`#00${index}`}
