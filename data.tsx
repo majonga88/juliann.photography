@@ -32,7 +32,7 @@ export const architecture: ContentGalleryMetadata = {
       background: "rgb(133, 203, 231)",
       font: "rgb(255, 255, 255)",
       hover: "rgb(0, 0, 0)",
-      progress: "rgb(133, 203, 231)",
+      progress: "rgb(74,125,157)",
       scroll: "rgb(89, 142, 163)",
     },
     logo: {
@@ -59,7 +59,7 @@ export const wildlife: ContentGalleryMetadata = {
       background: "rgb(144, 189, 223)",
       font: "rgb(255, 255, 255)",
       hover: "rgb(0, 0, 0)",
-      progress: "rgb(144, 189, 223)",
+      progress: "rgb(84,113,136)",
       scroll: "rgb(144, 189, 223)",
     },
     logo: {
@@ -86,7 +86,7 @@ export const nature: ContentGalleryMetadata = {
       background: "rgb(246, 192, 142)",
       font: "rgb(0, 0, 0)",
       hover: "rgb(255, 255, 255)",
-      progress: "rgb(246, 192, 142)",
+      progress: "rgb(166 131 98)",
       scroll: "rgb(246, 192, 142)",
     },
     logo: {
@@ -113,7 +113,7 @@ export const lights: ContentGalleryMetadata = {
       background: "rgb(135, 160, 172)",
       font: "rgb(255, 255, 255)",
       hover: "rgb(0, 0, 0)",
-      progress: "rgb(135, 160, 172)",
+      progress: "rgb(68,90,100)",
       scroll: "rgb(135, 160, 172)",
     },
     logo: {
@@ -140,7 +140,7 @@ export const citylife: ContentGalleryMetadata = {
       background: "rgb(219, 187, 119)",
       font: "rgb(0, 0, 0)",
       hover: "rgb(255, 255, 255)",
-      progress: "rgb(219, 187, 119)",
+      progress: "linear-gradient(rgba(219, 187, 119, 0.5), rgba(219, 187, 119, 0.5))",
       scroll: "rgb(219, 187, 119)",
     },
     logo: {

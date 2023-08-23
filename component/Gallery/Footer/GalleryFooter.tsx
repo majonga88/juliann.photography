@@ -1,3 +1,4 @@
+import { Copyright } from "@/component/Icon/Copyright";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import styled from "@emotion/styled";
@@ -27,7 +28,7 @@ export function GalleryFooter({ color, hoverColor }: Props) {
 
   return (
     <StyledFooter>
-      { isSmallerThanMd && (<Link href="/" style={{ color: color }}>
+      {isSmallerThanMd && (<Link href="/" style={{ color: color }}>
         <Flex alignItems={"center"} _hover={{ color: hoverColor }}>
           <ArrowBackIcon w={8} h={8} />
           <Text fontSize={"4.5rem"} margin={"6rem"} className={ls400.className}>

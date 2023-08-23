@@ -10,7 +10,7 @@ interface ColorProps {
   font: string;
   hover: string;
   scroll?: string;
-  progress: string;
+  progress?: string;
 }
 
 interface LogoProps {

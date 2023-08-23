@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 
 interface Props {
   scrollYProgress: any;
-  background: string;
+  background?: string;
 }
 
 const StyledProgress = styled(motion.div)({

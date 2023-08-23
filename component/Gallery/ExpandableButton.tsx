@@ -62,7 +62,7 @@ const ExpandableButton = () => {
                     <span>←</span>
                 </Arrow>
                 <Text variants={textVariants}>
-                    <span>Back to the Gallery</span>
+                    <span>Back to galleries</span>
                 </Text>
             </ButtonContainer>
         </Link>

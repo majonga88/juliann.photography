@@ -13,7 +13,6 @@ import { Icon } from "../Icon/Icon";
 import { ThemeProps } from "@/metadata/ThemeMetadata";
 import ExpandableButton from "../Gallery/ExpandableButton";
 import SocialButton from "../Gallery/SocialButton";
-import { useState } from "react";
 
 interface Props extends BoxProps {
   onClose: () => void;
