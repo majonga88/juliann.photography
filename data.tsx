@@ -29,11 +29,11 @@ export const architecture: ContentGalleryMetadata = {
   author: "_ Zaha Hadid.",
   theme: {
     color: {
-      background: "rgb(133, 203, 231)",
+      background: "rgb(203 174 129)",
       font: "rgb(255, 255, 255)",
       hover: "rgb(0, 0, 0)",
-      progress: "rgb(74,125,157)",
-      scroll: "rgb(89, 142, 163)",
+      progress: "rgba(0,0,0,0.8)",
+      scroll: "rgb(203 174 129)",
     },
     logo: {
       color: "rgb(255, 255, 255)",
@@ -59,7 +59,7 @@ export const wildlife: ContentGalleryMetadata = {
       background: "rgb(144, 189, 223)",
       font: "rgb(255, 255, 255)",
       hover: "rgb(0, 0, 0)",
-      progress: "rgb(84,113,136)",
+      progress: "rgba(0,0,0,0.8)",
       scroll: "rgb(144, 189, 223)",
     },
     logo: {
@@ -83,11 +83,11 @@ export const nature: ContentGalleryMetadata = {
   author: "_ Sir David Attenborough.",
   theme: {
     color: {
-      background: "rgb(246, 192, 142)",
+      background: "rgb(139 164 134)",
       font: "rgb(0, 0, 0)",
       hover: "rgb(255, 255, 255)",
-      progress: "rgb(166 131 98)",
-      scroll: "rgb(246, 192, 142)",
+      progress: "rgba(0,0,0,0.8)",
+      scroll: "rgb(139 164 134)",
     },
     logo: {
       color: "rgb(0, 0, 0)",
@@ -110,11 +110,11 @@ export const lights: ContentGalleryMetadata = {
   author: "_ Bram Stoker.",
   theme: {
     color: {
-      background: "rgb(135, 160, 172)",
+      background: "rgb(211 183 85)",
       font: "rgb(255, 255, 255)",
       hover: "rgb(0, 0, 0)",
-      progress: "rgb(68,90,100)",
-      scroll: "rgb(135, 160, 172)",
+      progress: "rgba(0,0,0,0.8)",
+      scroll: "rgb(211 183 85)",
     },
     logo: {
       color: "rgb(255, 255, 255)",
@@ -137,11 +137,11 @@ export const citylife: ContentGalleryMetadata = {
   author: "_ Margaret Mead.",
   theme: {
     color: {
-      background: "rgb(219, 187, 119)",
+      background: "rgb(174 174 174)",
       font: "rgb(0, 0, 0)",
       hover: "rgb(255, 255, 255)",
-      progress: "linear-gradient(rgba(219, 187, 119, 0.5), rgba(219, 187, 119, 0.5))",
-      scroll: "rgb(219, 187, 119)",
+      progress: "rgba(0,0,0,0.8)",
+      scroll: "rgb(174 174 174)",
     },
     logo: {
       color: "rgb(0, 0, 0)",

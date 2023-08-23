@@ -39,7 +39,14 @@ const Text = styled(motion.div)`
   white-space: nowrap;
 `;
 
-const ExpandableButton = () => {
+interface Props {
+    isBottom: boolean;
+}
+
+const ExpandableButton = ({ isBottom }: Props) => {
+
+    const activeVariant = isBottom ? 'hover' : 'initial';
+
     const buttonVariants = {
         initial: { width: "3rem" },
         hover: { width: "17rem" }
@@ -55,6 +62,7 @@ const ExpandableButton = () => {
             <ButtonContainer
                 initial="initial"
                 whileHover="hover"
+                animate={activeVariant}
                 variants={buttonVariants}
                 className={ls400.className}
             >

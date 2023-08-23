@@ -13,6 +13,7 @@ import { Icon } from "../Icon/Icon";
 import { ThemeProps } from "@/metadata/ThemeMetadata";
 import ExpandableButton from "../Gallery/ExpandableButton";
 import SocialButton from "../Gallery/SocialButton";
+import { useEffect, useState } from "react";
 
 interface Props extends BoxProps {
   onClose: () => void;
@@ -41,6 +42,25 @@ export function SidebarContent({
   const width = useBreakpointValue(
     isLight ? { base: 0, md: 130, lg: 230 } : { base: "full", md: 260, lg: 360 }
   );
+
+  const [isBottom, setIsBottom] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) {
+        setIsBottom(false);
+      } else {
+        setIsBottom(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <Box w={width} pos="fixed" h="full" bg={theme.color.background} {...rest}>
@@ -145,7 +165,7 @@ export function SidebarContent({
       </Grid>
       {isLight && (
         <Box boxSize="5.5rem">
-          <ExpandableButton></ExpandableButton>
+          <ExpandableButton isBottom={isBottom}></ExpandableButton>
         </Box>
       )}
 

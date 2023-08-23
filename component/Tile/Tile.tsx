@@ -28,24 +28,30 @@ export interface SingleTileProps {
 const StyledMotionText = styled(MotionText)({
   position: "absolute",
   "@media screen and (max-width: 48em)": {
-    fontSize: "1.875rem",
+    fontSize: "3.5rem",
     fontWeight: "400",
     top: "2vw",
     left: "6vw",
+    position: "absolute",
+    right: "3rem",
+    direction: "rtl",
+    bottom: 0,
   },
   "@media screen and (min-width: 48em)": {
-    fontSize: "2.5rem",
+    fontSize: "5rem",
     fontWeight: "400",
     top: "6vw",
     writingMode: "vertical-rl",
-    textOrientation: "mixed",
+    transform: "rotate(180deg)",
+    bottom: "4rem",
   },
   "@media screen and (min-width: 62em)": {
-    fontSize: "2.5rem",
+    fontSize: "5rem",
     fontWeight: "400",
     top: "6vw",
     writingMode: "vertical-rl",
-    textOrientation: "mixed",
+    transform: "rotate(180deg)",
+    bottom: "4rem",
   },
 });
 
@@ -92,7 +98,7 @@ export default function Tile({ tile }: SingleTileProps) {
             />
             <StyledMotionText
               initial={{ opacity: 1 }}
-              color={tile.titleColor || "rgb(255, 255, 255)"}
+              color={tile.titleColor || "rgb(255, 255, 255, 0.8)"}
               className={ls400.className}
             >
               {tile.title}
