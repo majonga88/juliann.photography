@@ -4,25 +4,25 @@ import { Flex, FlexProps, IconButton } from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
 
 interface Props extends FlexProps {
-  isLight: boolean;
+  isGallery: boolean;
   theme: ThemeProps;
   onOpen: () => void;
 }
 
-export function MobileNav({ isLight, theme, onOpen, ...rest }: Props) {
+export function MobileNav({ isGallery, theme, onOpen, ...rest }: Props) {
   return (
     <Flex
-      display={{ base: "flex", md: "none" }}
-      width={{ base: "100%", sm: "80%" }}
-      ml={{ base: 0, md: 60 }}
-      px={{ base: 4, md: 24 }}
+      display={{ base: "flex", lg: "none" }}
+      width={{ base: "100%", sm: "80%", md: "80%" }}
+      ml={{ base: 0, lg: 60 }}
+      px={{ base: 4, lg: 24 }}
       height="20"
       pt="21"
       gap={8}
       justifyContent="space-between"
       {...rest}
     >
-      {!isLight && (
+      {!isGallery && (
         <IconButton
           onClick={onOpen}
           aria-label="open menu"

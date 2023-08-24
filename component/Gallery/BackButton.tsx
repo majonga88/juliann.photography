@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { League_Spartan } from "next/font/google";
 import Link from "next/link";
+import { useSharedState } from "../sharedStateProvider";
 
 const ls400 = League_Spartan({
     weight: "400",
@@ -43,9 +44,11 @@ interface Props {
     isBottom: boolean;
 }
 
-const ExpandableButton = ({ isBottom }: Props) => {
+const BackButton = ({ isBottom }: Props) => {
 
-    const activeVariant = isBottom ? 'hover' : 'initial';
+    const { state, setState } = useSharedState();
+
+    const activeVariant = state ? 'hover' : 'initial';
 
     const buttonVariants = {
         initial: { width: "3rem" },
@@ -77,4 +80,4 @@ const ExpandableButton = ({ isBottom }: Props) => {
     );
 };
 
-export default ExpandableButton;
+export default BackButton;

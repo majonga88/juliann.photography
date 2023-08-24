@@ -24,14 +24,14 @@ const StyledFooter = styled.footer({
 
 export function GalleryFooter({ color, hoverColor }: Props) {
 
-  const [isSmallerThanMd] = useMediaQuery("(max-width: 48em)");
+  const [isSmallerThanMd] = useMediaQuery("(max-width: 62em)");
 
   return (
     <StyledFooter>
       {isSmallerThanMd && (<Link href="/" style={{ color: color }}>
         <Flex alignItems={"center"} _hover={{ color: hoverColor }}>
           <ArrowBackIcon w={8} h={8} />
-          <Text fontSize={"4.5rem"} margin={"6rem"} className={ls400.className}>
+          <Text fontSize={"4.5rem"} margin={"6rem"} className={ls400.className} textAlign={"center"}>
             Back to galleries
           </Text>
         </Flex>

@@ -27,7 +27,7 @@ export interface SingleTileProps {
 
 const StyledMotionText = styled(MotionText)({
   position: "absolute",
-  "@media screen and (max-width: 48em)": {
+  "@media screen and (max-width: 62em)": {
     fontSize: "3.5rem",
     fontWeight: "400",
     top: "2vw",
@@ -36,14 +36,6 @@ const StyledMotionText = styled(MotionText)({
     right: "3rem",
     direction: "rtl",
     bottom: 0,
-  },
-  "@media screen and (min-width: 48em)": {
-    fontSize: "5rem",
-    fontWeight: "400",
-    top: "6vw",
-    writingMode: "vertical-rl",
-    transform: "rotate(180deg)",
-    bottom: "4rem",
   },
   "@media screen and (min-width: 62em)": {
     fontSize: "5rem",
@@ -84,7 +76,6 @@ export default function Tile({ tile }: SingleTileProps) {
             onHoverStart={() => setHovered(true)}
             onHoverEnd={() => setHovered(false)}
             onTapStart={() => setTaped(true)}
-            onTapEnd={() => setTaped(false)}
             display="flex"
             alignItems="top"
             justifyContent="center"
@@ -92,7 +83,7 @@ export default function Tile({ tile }: SingleTileProps) {
             <Image
               src={tile.imgLocation}
               width={"100%"}
-              height={{ base: "20vh", md: "100vh", lg: "100vh" }}
+              height={{ base: "20vh", lg: "100vh" }}
               objectFit={"cover"}
               alt={tile.alt}
             />

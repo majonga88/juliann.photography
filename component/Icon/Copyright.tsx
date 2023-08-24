@@ -7,7 +7,7 @@ interface Props {
 export function Copyright({ logoColor }: Props) {
   return (
     <Box float="right">
-      <Text position="fixed" bottom="0" color={logoColor}>
+      <Text position="fixed" bottom="4" color={logoColor}>
         ©
       </Text>
     </Box>

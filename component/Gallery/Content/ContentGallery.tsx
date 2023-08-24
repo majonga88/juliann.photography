@@ -5,6 +5,8 @@ import { Progress } from "@/component/Progress/Progress";
 import { Photo } from "./Photo/Photo";
 import { ThemeProps } from "@/metadata/ThemeMetadata";
 import { PhotoMetadata } from "@/metadata/PhotoMetadata";
+import { useEffect, useState } from "react";
+import { useSharedState } from "@/component/sharedStateProvider";
 
 export interface GalleryMetadata {
   theme: ThemeProps;
@@ -18,7 +20,26 @@ interface Props {
 }
 
 export function ContentGallery({ category, hideTitleNumber, gallery }: Props) {
+
   const { scrollYProgress } = useScroll();
+  const { state, setState } = useSharedState();
+
+  useEffect(() => {
+    
+    if (scrollYProgress.get() < 1) {
+      setState(false);
+    }
+
+    const unsubscribe = scrollYProgress.onChange((value) => {
+      setState(value >= 1); // value is between 0 and 1
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, [scrollYProgress]);
+
+  console.log(state); // This will log the current scaleX value based on the scroll position
 
   return (
     <>

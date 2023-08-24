@@ -12,11 +12,10 @@ export default function Home() {
     <Sidebar links={home.links} theme={home.theme}>
       <Grid
         gridTemplateRows={{
-          sm: "100px1fr",
+          base: "100px1fr",
         }}
         gridTemplateColumns={{
-          sm: "repeat(1, 1fr)",
-          md: "repeat(6, 1fr)",
+          base: "repeat(1, 1fr)",
           lg: "repeat(6, 1fr)",
         }}
         gridTemplateAreas={{
@@ -27,7 +26,6 @@ export default function Home() {
         'citylife'
         'lights'
         'about'`,
-          md: `'architecture wildlife nature citylife lights about'`,
           lg: `'architecture wildlife nature citylife lights about'`,
         }}
         h="100vh"

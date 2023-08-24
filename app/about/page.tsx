@@ -3,11 +3,11 @@
 import { Quote } from "@/component/Quote/Quote";
 
 import { about } from "@/data";
-import { Gallery } from "@/component/Gallery/Gallery";
 import StyledShortSidebar from "@/component/Sidebar/Sidebar";
 import StyledScrollbar from "@/component/Scrollbar/StyledScrollbar";
 import StyledGallery from "@/component/Gallery/StyledGallery";
 import styled from "@emotion/styled";
+import { Transition } from "@/component/Transition/Transition";
 
 export default function About() {
 
@@ -20,7 +20,7 @@ export default function About() {
   });
 
   return (
-    <StyledShortSidebar isLight theme={about.theme}>
+    <StyledShortSidebar isGallery theme={about.theme}>
       <StyledScrollbar color={about.theme.color.scroll} />
       <StyledAbout>
         <Quote
@@ -28,6 +28,7 @@ export default function About() {
           description={about.description}
           author={about.author}
         />
+        <Transition backgroundColor={about.theme.color.background} />
       </StyledAbout>
     </StyledShortSidebar>
   );

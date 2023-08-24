@@ -13,17 +13,17 @@ interface LinkProps {
 }
 
 export default function Sidebar({
-  isLight,
+  isGallery,
   links,
   theme,
   children,
 }: {
-  isLight?: boolean;
+  isGallery?: boolean;
   links?: Array<LinkProps>;
   theme: ThemeProps;
   children: ReactNode;
 }) {
-  const lightMode = isLight || false;
+  const galleryMode = isGallery || false;
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [isLargerThanMd] = useMediaQuery("(min-width: 48em)");
@@ -37,12 +37,12 @@ export default function Sidebar({
     <Box minH="100vh" bg={theme.color.background} color={theme.color.font}>
       <SidebarContent
         onClose={() => onClose}
-        display={{ base: "none", md: "block" }}
-        isLight={lightMode}
+        display={{ base: "none", lg: "block" }}
+        isGallery={galleryMode}
         theme={theme}
         links={links}
       />
-      {!isLight && (
+      {!galleryMode && (
         <>
           <Drawer
             autoFocus={false}
@@ -55,7 +55,7 @@ export default function Sidebar({
           >
             <DrawerContent>
               <SidebarContent
-                isLight={lightMode}
+                isGallery={galleryMode}
                 onClose={onClose}
                 theme={theme}
                 links={links}
@@ -64,8 +64,8 @@ export default function Sidebar({
           </Drawer>
         </>
       )}
-      <MobileNav isLight={lightMode} theme={theme} onOpen={onOpen} />
-      <Box ml={{ base: 0, md: 260, lg: 360 }}>{children}</Box>
+      <MobileNav isGallery={galleryMode} theme={theme} onOpen={onOpen} />
+      <Box ml={{ base: 0, lg: 360 }}>{children}</Box>
     </Box>
   );
 }

@@ -26,7 +26,6 @@ const ls400 = League_Spartan({
 
 export function Quote({ title, description, quote, author }: Props) {
   const headingSize = useBreakpointValue({ base: "2xl", md: "3xl", lg: "4xl" });
-  const quoteSize = useBreakpointValue({ base: "md", md: "lg", lg: "xl" });
   const authorSize = useBreakpointValue({ base: "md", md: "lg", lg: "xl" });
 
   return (

@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { League_Spartan } from "next/font/google";
 import Link from "next/link";
+import { useState } from "react";
 
 const ls400 = League_Spartan({
     weight: "400",
@@ -14,7 +15,7 @@ const ButtonContainer = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background: rgb(255 255 255);
   border-radius: 1rem;
   cursor: pointer;
   position: fixed;
@@ -25,18 +26,18 @@ const Arrow = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 1rem;
   font-size: 1.5rem;
-  color: rgb(0, 0, 0);
+  color: rgb(0 0 0);
 `;
 
 const Text = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 1rem;
   font-size: 1.5rem;
-  color: rgb(0, 0, 0);
+  color: rgb(0 0 0);
   white-space: nowrap;
 `;
 
@@ -52,27 +53,32 @@ interface Props {
 
 const SocialButton = ({theme, viewBox, width, height, path, title, src}: Props) => {
 
-    const [isSmallerThanMd] = useMediaQuery("(max-width: 48em)");
+    const [isSmallerThanLg] = useMediaQuery("(max-width: 62em)");
 
-    const buttonVariants = isSmallerThanMd ? {
+    const buttonVariants = isSmallerThanLg ? {
         initial: { height: "5rem", width: "5rem" },
-        hover: { height: "15rem", width: "5rem" }
+        hover: { height: "15rem", width: "5rem" },
+        tap: { height: "15rem", width: "5rem" },
     } : {
         initial: { width: "5rem" },
-        hover: { width: "15rem" }
+        hover: { width: "15rem" },
+        tap: { width: "15rem" },
     };
 
-    const textVariants = isSmallerThanMd ? {
-        initial: { opacity: 0, y: "20px" },
-        hover: { opacity: 0, y: "0" }
+    const textVariants = isSmallerThanLg ? {
+        initial: { opacity: 0, y: "1rem" },
+        hover: { opacity: 0, y: "0" },
+        tap: { opacity: 0, y: "0" },
     } : {
-        initial: { opacity: 0, x: "-20px" },
-        hover: { opacity: 1, x: "0" }
+        initial: { opacity: 0, x: "-1rem" },
+        hover: { opacity: 1, x: "0" },
+        tap: { opacity: 1, x: "0" },
     };
 
     const arrowVariants = {
         initial: { opacity: 1, rotate: 0 },
-        hover: { opacity: 1, rotate: 90 }
+        hover: { opacity: 1, rotate: 90 },
+        tap: { opacity: 1, rotate: 90 },
     };
     
     return (
@@ -80,6 +86,7 @@ const SocialButton = ({theme, viewBox, width, height, path, title, src}: Props) 
             <ButtonContainer
                 initial="initial"
                 whileHover="hover"
+                whileTap="tap"
                 variants={buttonVariants}
                 className={ls400.className}
             >
@@ -92,14 +99,12 @@ const SocialButton = ({theme, viewBox, width, height, path, title, src}: Props) 
                     >
                         <motion.path
                             d={path}
-                            //variants={theme.logo.variants}
                             initial="hidden"
                             animate="visible"
                             transition={{
                                 default: { duration: 2, ease: "easeInOut" },
                                 fill: { duration: 2, ease: [1, 0.8, 0.2, 0] },
                             }}
-                            //stroke={theme.logo.stroke}
                             strokeWidth={0.5}
                             strokeDasharray="0 1"
                             strokeLinecap="round"
