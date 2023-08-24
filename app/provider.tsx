@@ -19,8 +19,9 @@ const theme = extendTheme({
 
 const globalStyles = css({
   "*": {
-    userSelect: "none"
-  }
+    userSelect: "none",
+    overscrollBehavior: "none",
+  },
 });
 
 export default function RootLayout({
