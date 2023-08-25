@@ -3,15 +3,13 @@ import { useMediaQuery } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { League_Spartan } from "next/font/google";
-import Link from "next/link";
-import { useState } from "react";
 
 const ls400 = League_Spartan({
     weight: "400",
     subsets: ["latin"],
 });
 
-const ButtonContainer = styled(motion.div)`
+const ButtonContainer = styled(motion.a)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,14 +17,13 @@ const ButtonContainer = styled(motion.div)`
   border-radius: 1rem;
   cursor: pointer;
   position: fixed;
-  margin: 1rem;
+  padding: 0.80rem;
 `;
 
 const Arrow = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
   font-size: 1.5rem;
   color: rgb(0 0 0);
 `;
@@ -35,7 +32,6 @@ const Text = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
   font-size: 1.5rem;
   color: rgb(0 0 0);
   white-space: nowrap;
@@ -51,7 +47,7 @@ interface Props {
     src: string,
 }
 
-const SocialButton = ({theme, viewBox, width, height, path, title, src}: Props) => {
+const SocialButton = ({ theme, viewBox, width, height, path, title, src }: Props) => {
 
     const [isSmallerThanLg] = useMediaQuery("(max-width: 62em)");
 
@@ -80,44 +76,43 @@ const SocialButton = ({theme, viewBox, width, height, path, title, src}: Props) 
         hover: { opacity: 1, rotate: 90 },
         tap: { opacity: 1, rotate: 90 },
     };
-    
+
     return (
-        <Link href={src}>
-            <ButtonContainer
-                initial="initial"
-                whileHover="hover"
-                whileTap="tap"
-                variants={buttonVariants}
-                className={ls400.className}
-            >
-                <Arrow variants={arrowVariants}>
-                    <motion.svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox={viewBox}
-                        width={width}
-                        height={height}
-                    >
-                        <motion.path
-                            d={path}
-                            initial="hidden"
-                            animate="visible"
-                            transition={{
-                                default: { duration: 2, ease: "easeInOut" },
-                                fill: { duration: 2, ease: [1, 0.8, 0.2, 0] },
-                            }}
-                            strokeWidth={0.5}
-                            strokeDasharray="0 1"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            width="100%"
-                        />
-                    </motion.svg>
-                </Arrow>
-                <Text variants={textVariants}>
-                    <span>{title}</span>
-                </Text>
-            </ButtonContainer>
-        </Link>
+        <ButtonContainer
+            initial="initial"
+            whileHover="hover"
+            whileTap="tap"
+            variants={buttonVariants}
+            className={ls400.className}
+            href={src}
+        >
+            <Arrow variants={arrowVariants}>
+                <motion.svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox={viewBox}
+                    width={width}
+                    height={height}
+                >
+                    <motion.path
+                        d={path}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{
+                            default: { duration: 2, ease: "easeInOut" },
+                            fill: { duration: 2, ease: [1, 0.8, 0.2, 0] },
+                        }}
+                        strokeWidth={0.5}
+                        strokeDasharray="0 1"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        width="100%"
+                    />
+                </motion.svg>
+            </Arrow>
+            <Text variants={textVariants}>
+                <span>{title}</span>
+            </Text>
+        </ButtonContainer>
     );
 };
 
