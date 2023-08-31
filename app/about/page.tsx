@@ -8,6 +8,7 @@ import StyledScrollbar from "@/component/Scrollbar/StyledScrollbar";
 import StyledGallery from "@/component/Gallery/StyledGallery";
 import styled from "@emotion/styled";
 import { Transition } from "@/component/Transition/Transition";
+import { GalleryFooter } from "@/component/Gallery/Footer/GalleryFooter";
 
 export default function About() {
 
@@ -15,8 +16,7 @@ export default function About() {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/about/about-1.jpg')`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
-    backgroundSize: 'cover',
-    height: "100vh"
+    backgroundSize: 'cover'
   });
 
   return (
@@ -27,6 +27,10 @@ export default function About() {
           title={about.title}
           description={about.description}
           author={about.author}
+        />
+        <GalleryFooter
+          color={about.theme.color.font}
+          hoverColor={about.theme.color.hover}
         />
         <Transition backgroundColor={about.theme.color.background} />
       </StyledAbout>

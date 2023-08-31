@@ -1,5 +1,5 @@
 import { ThemeProps } from "@/metadata/ThemeMetadata";
-import { useMediaQuery } from "@chakra-ui/react";
+import { useBreakpointValue, useMediaQuery } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { League_Spartan } from "next/font/google";
@@ -49,24 +49,14 @@ interface Props {
 
 const SocialButton = ({ theme, viewBox, width, height, path, title, src }: Props) => {
 
-    const [isSmallerThanLg] = useMediaQuery("(max-width: 62em)");
-
-    const buttonVariants = isSmallerThanLg ? {
-        initial: { height: "5rem", width: "5rem" },
-        hover: { height: "15rem", width: "5rem" },
-        tap: { height: "15rem", width: "5rem" },
-    } : {
+    const buttonVariants = {
         initial: { width: "5rem" },
         hover: { width: "15rem" },
         tap: { width: "15rem" },
     };
 
-    const textVariants = isSmallerThanLg ? {
-        initial: { opacity: 0, y: "1rem" },
-        hover: { opacity: 0, y: "0" },
-        tap: { opacity: 0, y: "0" },
-    } : {
-        initial: { opacity: 0, x: "-1rem" },
+    const textVariants = {
+        initial: { opacity: 0, x: "-1rem", y: "1rem" },
         hover: { opacity: 1, x: "0" },
         tap: { opacity: 1, x: "0" },
     };
@@ -90,8 +80,7 @@ const SocialButton = ({ theme, viewBox, width, height, path, title, src }: Props
                 <motion.svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox={viewBox}
-                    width={width}
-                    height={height}
+                    style={{ width: '2.5rem', height: '2.5rem' }}
                 >
                     <motion.path
                         d={path}
