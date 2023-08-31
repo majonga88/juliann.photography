@@ -9,6 +9,9 @@ import StyledGallery from "@/component/Gallery/StyledGallery";
 import styled from "@emotion/styled";
 import { Transition } from "@/component/Transition/Transition";
 import { GalleryFooter } from "@/component/Gallery/Footer/GalleryFooter";
+import { useScroll } from "framer-motion";
+import { useSharedState } from "@/component/sharedStateProvider";
+import { useEffect } from "react";
 
 export default function About() {
 
@@ -18,6 +21,14 @@ export default function About() {
     backgroundPosition: 'center center',
     backgroundSize: 'cover'
   });
+
+  const { state, setState } = useSharedState();
+
+  useEffect(() => {
+    
+    setState(true);
+
+  }, []);
 
   return (
     <StyledShortSidebar isGallery theme={about.theme}>

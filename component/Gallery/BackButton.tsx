@@ -40,11 +40,7 @@ const Text = styled(motion.div)`
   white-space: nowrap;
 `;
 
-interface Props {
-    isBottom: boolean;
-}
-
-const BackButton = ({ isBottom }: Props) => {
+const BackButton = () => {
 
     const { state, setState } = useSharedState();
 

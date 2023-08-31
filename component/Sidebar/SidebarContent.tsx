@@ -47,24 +47,6 @@ const rowHeight = useBreakpointValue({
   base: "80px",
 });
 
-  const [isBottom, setIsBottom] = useState(false);
-
-  const handleScroll = (e: any) => {
-    const target = e.target.documentElement ? e.target.documentElement : e.target;
-    if (target.scrollHeight - target.scrollTop === target.clientHeight) {
-      setIsBottom(true);
-    } else {
-      setIsBottom(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <Box w={width} pos="fixed" h="full" bg={theme.color.background} {...rest}>
       <Box mx="8" mt="8" justifyContent="space-between" h={"17vh"}>
@@ -153,7 +135,7 @@ const rowHeight = useBreakpointValue({
       </Box>
       {isGallery && (
         <Box boxSize="5.5rem">
-          <BackButton isBottom={isBottom}></BackButton>
+          <BackButton></BackButton>
         </Box>
       )}
 

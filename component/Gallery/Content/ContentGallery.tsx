@@ -26,7 +26,7 @@ export function ContentGallery({ category, hideTitleNumber, gallery }: Props) {
 
   useEffect(() => {
     
-    if (scrollYProgress.get() < 1) {
+    if (scrollYProgress.get() < 1 || state === true) {
       setState(false);
     }
 
@@ -38,8 +38,6 @@ export function ContentGallery({ category, hideTitleNumber, gallery }: Props) {
       unsubscribe();
     };
   }, [scrollYProgress]);
-
-  console.log(state); // This will log the current scaleX value based on the scroll position
 
   return (
     <>
