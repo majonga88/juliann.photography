@@ -29,23 +29,25 @@ export const architecture: ContentGalleryMetadata = {
   author: "_ Zaha Hadid.",
   theme: {
     color: {
-      background: "rgb(203 174 129)",
-      font: "rgb(255, 255, 255)",
-      hover: "rgb(0, 0, 0)",
-      progress: "rgba(0,0,0,0.8)",
-      scroll: "rgb(203 174 129)",
+      background: "rgb(130 120 115)",
+      font: "rgb(255 255 255)",
+      hover: "rgb(0 0 0)",
+      progress: "rgba(0 0 0 0.8)",
+      scroll: "rgb(130 120 115)",
     },
     logo: {
-      color: "rgb(255, 255, 255)",
-      stroke: "rgb(255, 255, 255)",
-      hover: "rgb(0, 0, 0)",
-      variants: loadVariantsForLogo("255, 255, 255"),
+      color: "rgb(255 255 255)",
+      stroke: "rgb(255 255 255)",
+      hover: "rgb(0 0 0)",
+      variants: loadVariantsForLogo("255 255 255"),
     },
   },
   photos: [
     { aspectRatio: Direction.Horizontal, alt: "Photo 1" },
     { aspectRatio: Direction.Horizontal, alt: "Photo 2" },
     { aspectRatio: Direction.Horizontal, alt: "Photo 3" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 4" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 5" },
   ],
 };
 
@@ -56,23 +58,25 @@ export const wildlife: ContentGalleryMetadata = {
   author: "_ Edward O. Wilson.",
   theme: {
     color: {
-      background: "rgb(144, 189, 223)",
-      font: "rgb(255, 255, 255)",
-      hover: "rgb(0, 0, 0)",
-      progress: "rgba(0,0,0,0.8)",
-      scroll: "rgb(144, 189, 223)",
+      background: "rgb(45 84 86)",
+      font: "rgb(255 255 255)",
+      hover: "rgb(0 0 0)",
+      progress: "rgba(0 0 0 0.8)",
+      scroll: "rgb(45 84 86)",
     },
     logo: {
-      color: "rgb(255, 255, 255)",
-      stroke: "rgb(255, 255, 255)",
-      hover: "rgb(0, 0, 0)",
-      variants: loadVariantsForLogo("255, 255, 255"),
+      color: "rgb(255 255 255)",
+      stroke: "rgb(255 255 255)",
+      hover: "rgb(0 0 0)",
+      variants: loadVariantsForLogo("255 255 255"),
     },
   },
   photos: [
     { aspectRatio: Direction.Horizontal, alt: "Photo 1" },
     { aspectRatio: Direction.Horizontal, alt: "Photo 2" },
     { aspectRatio: Direction.Horizontal, alt: "Photo 3" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 4" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 5" },
   ],
 };
 
@@ -83,23 +87,25 @@ export const nature: ContentGalleryMetadata = {
   author: "_ Sir David Attenborough.",
   theme: {
     color: {
-      background: "rgb(139 164 134)",
-      font: "rgb(0, 0, 0)",
-      hover: "rgb(255, 255, 255)",
-      progress: "rgba(0,0,0,0.8)",
-      scroll: "rgb(139 164 134)",
+      background: "rgb(5 103 135)",
+      font: "rgb(255 255 255)",
+      hover: "rgb(255 255 255)",
+      progress: "rgba(255 255 255 0.8)",
+      scroll: "rgb(5 103 135)",
     },
     logo: {
-      color: "rgb(0, 0, 0)",
-      stroke: "rgb(0, 0, 0)",
-      hover: "rgb(255, 255, 255)",
-      variants: loadVariantsForLogo("0, 0, 0"),
+      color: "rgb(255 255 255)",
+      stroke: "rgb(255 255 255)",
+      hover: "rgb(0 0 0)",
+      variants: loadVariantsForLogo("255 255 255"),
     },
   },
   photos: [
     { aspectRatio: Direction.Horizontal, alt: "Photo 1" },
     { aspectRatio: Direction.Horizontal, alt: "Photo 2" },
     { aspectRatio: Direction.Horizontal, alt: "Photo 3" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 4" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 5" },
   ],
 };
 
@@ -110,11 +116,11 @@ export const lights: ContentGalleryMetadata = {
   author: "_ Bram Stoker.",
   theme: {
     color: {
-      background: "rgb(211 183 85)",
+      background: "rgb(8 8 8)",
       font: "rgb(255, 255, 255)",
       hover: "rgb(0, 0, 0)",
       progress: "rgba(0,0,0,0.8)",
-      scroll: "rgb(211 183 85)",
+      scroll: "rgb(8 8 8)",
     },
     logo: {
       color: "rgb(255, 255, 255)",
@@ -127,6 +133,8 @@ export const lights: ContentGalleryMetadata = {
     { aspectRatio: Direction.Vertical, alt: "Photo 1" },
     { aspectRatio: Direction.Horizontal, alt: "Photo 2" },
     { aspectRatio: Direction.Horizontal, alt: "Photo 3" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 4" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 5" },
   ],
 };
 
@@ -137,23 +145,25 @@ export const citylife: ContentGalleryMetadata = {
   author: "_ Margaret Mead.",
   theme: {
     color: {
-      background: "rgb(174 174 174)",
-      font: "rgb(0, 0, 0)",
-      hover: "rgb(255, 255, 255)",
-      progress: "rgba(0,0,0,0.8)",
-      scroll: "rgb(174 174 174)",
+      background: "rgb(0 47 46)",
+      font: "rgb(255 255 255)",
+      hover: "rgb(0 0 0)",
+      progress: "rgba(255 255 255 0.8)",
+      scroll: "rgb(0 47 46)",
     },
     logo: {
-      color: "rgb(0, 0, 0)",
-      stroke: "rgb(0, 0, 0)",
-      hover: "rgb(255, 255, 255)",
-      variants: loadVariantsForLogo("0, 0, 0"),
+      color: "rgb(255 255 255)",
+      stroke: "rgb(255 255 255)",
+      hover: "rgb(0 0 0)",
+      variants: loadVariantsForLogo("255 255 255"),
     },
   },
   photos: [
     { aspectRatio: Direction.Horizontal, alt: "Photo 1" },
-    { aspectRatio: Direction.Vertical, alt: "Photo 2" },
-    { aspectRatio: Direction.Vertical, alt: "Photo 3" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 2" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 3" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 4" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 5" },
   ],
 };
 
