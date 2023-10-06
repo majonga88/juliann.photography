@@ -31,14 +31,13 @@ export function GalleryFooter({ color, hoverColor, nextGalleryLink }: Props) {
     <StyledFooter>
       {isSmallerThanMd && (<Link href={nextGalleryLink.path} style={{ color: color }}>
         <Flex alignItems={"center"} _hover={{ color: hoverColor }}>
+          <Text fontSize={"2.75rem"} className={ls400.className} textAlign={"center"}>
           {nextGalleryLink.arrow == '→' &&
             <ArrowForwardIcon w={8} h={8} />
           }
           {nextGalleryLink.arrow == '←' &&
-            <ArrowBackIcon w={8} h={8} />
-          }
-          <Text fontSize={"4.5rem"} margin={"6rem"} className={ls400.className} textAlign={"center"}>
-            {nextGalleryLink.name}
+            <ArrowBackIcon w={8} h={8}/>
+          }{nextGalleryLink.name}
           </Text>
         </Flex>
       </Link>)}

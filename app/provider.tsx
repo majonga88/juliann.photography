@@ -21,6 +21,7 @@ const globalStyles = css({
   "*": {
     userSelect: "none",
     overscrollBehavior: "none",
+    overflowX: "hidden",
   },
 });
 
