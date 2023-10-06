@@ -9,7 +9,6 @@ import StyledGallery from "@/component/Gallery/StyledGallery";
 import styled from "@emotion/styled";
 import { Transition } from "@/component/Transition/Transition";
 import { GalleryFooter } from "@/component/Gallery/Footer/GalleryFooter";
-import { useScroll } from "framer-motion";
 import { useSharedState } from "@/component/sharedStateProvider";
 import { useEffect } from "react";
 
@@ -31,7 +30,7 @@ export default function About() {
   }, []);
 
   return (
-    <StyledShortSidebar isGallery theme={about.theme}>
+    <StyledShortSidebar isGallery theme={about.theme} nextGalleryLink={about.nextGalleryLink}>
       <StyledScrollbar color={about.theme.color.scroll} />
       <StyledAbout>
         <Quote
@@ -42,6 +41,7 @@ export default function About() {
         <GalleryFooter
           color={about.theme.color.font}
           hoverColor={about.theme.color.hover}
+          nextGalleryLink={about.nextGalleryLink}
         />
         <Transition backgroundColor={about.theme.color.background} />
       </StyledAbout>

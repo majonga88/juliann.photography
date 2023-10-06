@@ -9,7 +9,7 @@ import StyledScrollbar from "@/component/Scrollbar/StyledScrollbar";
 
 export default function Architecture() {
   return (
-    <Sidebar isGallery theme={architecture.theme}>
+    <Sidebar isGallery theme={architecture.theme} nextGalleryLink={architecture.nextGalleryLink}>
       <StyledScrollbar color={architecture.theme.color.scroll} />
       <StyledGallery>
         <Quote

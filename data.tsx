@@ -49,6 +49,11 @@ export const architecture: ContentGalleryMetadata = {
     { aspectRatio: Direction.Horizontal, alt: "Photo 4" },
     { aspectRatio: Direction.Horizontal, alt: "Photo 5" },
   ],
+  nextGalleryLink: {
+    arrow: '→',
+    name: 'Wildlife Gallery',
+    path: '/wildlife'
+  }
 };
 
 export const wildlife: ContentGalleryMetadata = {
@@ -78,6 +83,11 @@ export const wildlife: ContentGalleryMetadata = {
     { aspectRatio: Direction.Horizontal, alt: "Photo 4" },
     { aspectRatio: Direction.Horizontal, alt: "Photo 5" },
   ],
+  nextGalleryLink: {
+    arrow: '→',
+    name: 'Nature Gallery',
+    path: '/nature'
+  }
 };
 
 export const nature: ContentGalleryMetadata = {
@@ -89,7 +99,7 @@ export const nature: ContentGalleryMetadata = {
     color: {
       background: "rgb(5 103 135)",
       font: "rgb(255 255 255)",
-      hover: "rgb(255 255 255)",
+      hover: "rgb(0 0 0)",
       progress: "rgba(255 255 255 0.8)",
       scroll: "rgb(5 103 135)",
     },
@@ -107,35 +117,11 @@ export const nature: ContentGalleryMetadata = {
     { aspectRatio: Direction.Horizontal, alt: "Photo 4" },
     { aspectRatio: Direction.Horizontal, alt: "Photo 5" },
   ],
-};
-
-export const lights: ContentGalleryMetadata = {
-  title: "Lights",
-  quote:
-    "There are darknesses in life and there are lights, and you are one of the lights, the light of all lights.",
-  author: "_ Bram Stoker.",
-  theme: {
-    color: {
-      background: "rgb(8 8 8)",
-      font: "rgb(255, 255, 255)",
-      hover: "rgb(0, 0, 0)",
-      progress: "rgba(0,0,0,0.8)",
-      scroll: "rgb(8 8 8)",
-    },
-    logo: {
-      color: "rgb(255, 255, 255)",
-      stroke: "rgb(255, 255, 255)",
-      hover: "rgb(0, 0, 0)",
-      variants: loadVariantsForLogo("255, 255, 255"),
-    },
-  },
-  photos: [
-    { aspectRatio: Direction.Vertical, alt: "Photo 1" },
-    { aspectRatio: Direction.Horizontal, alt: "Photo 2" },
-    { aspectRatio: Direction.Horizontal, alt: "Photo 3" },
-    { aspectRatio: Direction.Horizontal, alt: "Photo 4" },
-    { aspectRatio: Direction.Horizontal, alt: "Photo 5" },
-  ],
+  nextGalleryLink: {
+    arrow: '→',
+    name: 'City-life Gallery',
+    path: '/city-life'
+  }
 };
 
 export const citylife: ContentGalleryMetadata = {
@@ -147,14 +133,14 @@ export const citylife: ContentGalleryMetadata = {
     color: {
       background: "rgb(0 47 46)",
       font: "rgb(255 255 255)",
-      hover: "rgb(0 0 0)",
+      hover: "rgb(166 166 166)",
       progress: "rgba(255 255 255 0.8)",
       scroll: "rgb(0 47 46)",
     },
     logo: {
       color: "rgb(255 255 255)",
       stroke: "rgb(255 255 255)",
-      hover: "rgb(0 0 0)",
+      hover: "rgb(166 166 166)",
       variants: loadVariantsForLogo("255 255 255"),
     },
   },
@@ -165,6 +151,45 @@ export const citylife: ContentGalleryMetadata = {
     { aspectRatio: Direction.Horizontal, alt: "Photo 4" },
     { aspectRatio: Direction.Horizontal, alt: "Photo 5" },
   ],
+  nextGalleryLink: {
+    arrow: '→',
+    name: 'Lights Gallery',
+    path: '/lights'
+  }
+};
+
+export const lights: ContentGalleryMetadata = {
+  title: "Lights",
+  quote:
+    "There are darknesses in life and there are lights, and you are one of the lights, the light of all lights.",
+  author: "_ Bram Stoker.",
+  theme: {
+    color: {
+      background: "rgb(8 8 8)",
+      font: "rgb(255 255 255)",
+      hover: "rgb(166 166 166)",
+      progress: "rgba(0,0,0,0.8)",
+      scroll: "rgb(8 8 8)",
+    },
+    logo: {
+      color: "rgb(255 255 255)",
+      stroke: "rgb(255 255 255)",
+      hover: "rgb(166 166 166)",
+      variants: loadVariantsForLogo("255 255 255"),
+    },
+  },
+  photos: [
+    { aspectRatio: Direction.Vertical, alt: "Photo 1" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 2" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 3" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 4" },
+    { aspectRatio: Direction.Horizontal, alt: "Photo 5" },
+  ],
+  nextGalleryLink: {
+    arrow: '→',
+    name: 'About',
+    path: '/about'
+  }
 };
 
 export const about: AboutMetadata = {
@@ -176,20 +201,25 @@ export const about: AboutMetadata = {
   author: "_ Julian.",
   theme: {
     color: {
-      background: "rgb(0, 0, 0)",
-      font: "rgb(255, 255, 255)",
-      hover: "rgb(255, 255, 255)",
+      background: "rgb(0 0 0)",
+      font: "rgb(255 255 255)",
+      hover: "rgb(166 166 166)",
     },
     logo: {
-      color: "rgb(162, 179, 204)",
-      stroke: "rgb(162, 179, 204)",
-      hover: "rgb(255, 255, 255)",
-      variants: loadVariantsForLogo("162, 179, 204"),
+      color: "rgb(162 179 204)",
+      stroke: "rgb(162 179 204)",
+      hover: "rgb(166 166 166)",
+      variants: loadVariantsForLogo("162 179 204"),
     },
   },
   photos: [
     { title: "Photo 1", aspectRatio: Direction.Horizontal, alt: "Photo 1" },
   ],
+  nextGalleryLink: {
+    arrow: '←',
+    name: 'Back to Galleries',
+    path: '/'
+  }
 };
 
 export const home: HomeMetadata = {

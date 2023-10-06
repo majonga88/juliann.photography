@@ -1,4 +1,3 @@
-import { Copyright } from "@/component/Icon/Copyright";
 import { Icon } from "@/component/Icon/Icon";
 import { ThemeProps } from "@/metadata/ThemeMetadata";
 import { Flex, FlexProps, IconButton, useBreakpointValue } from "@chakra-ui/react";

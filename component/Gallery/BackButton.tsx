@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { League_Spartan } from "next/font/google";
 import Link from "next/link";
 import { useSharedState } from "../sharedStateProvider";
+import { LinkProps } from "@/metadata/LinkProps";
 
 const ls400 = League_Spartan({
     weight: "400",
@@ -40,7 +41,7 @@ const Text = styled(motion.div)`
   white-space: nowrap;
 `;
 
-const BackButton = () => {
+const BackButton = ({arrow, name, path}: LinkProps) => {
 
     const { state, setState } = useSharedState();
 
@@ -57,7 +58,7 @@ const BackButton = () => {
     };
 
     return (
-        <Link href='/'>
+        <Link href={path}>
             <ButtonContainer
                 initial="initial"
                 whileHover="hover"
@@ -66,10 +67,10 @@ const BackButton = () => {
                 className={ls400.className}
             >
                 <Arrow>
-                    <span>←</span>
+                    <span>{arrow}</span>
                 </Arrow>
                 <Text variants={textVariants}>
-                    <span>Back to galleries</span>
+                    <span>{name}</span>
                 </Text>
             </ButtonContainer>
         </Link>

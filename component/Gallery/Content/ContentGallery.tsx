@@ -3,15 +3,9 @@
 import { useScroll } from "framer-motion";
 import { Progress } from "@/component/Progress/Progress";
 import { Photo } from "./Photo/Photo";
-import { ThemeProps } from "@/metadata/ThemeMetadata";
-import { PhotoMetadata } from "@/metadata/PhotoMetadata";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSharedState } from "@/component/sharedStateProvider";
-
-export interface GalleryMetadata {
-  theme: ThemeProps;
-  photos: PhotoMetadata[];
-}
+import { GalleryMetadata } from "@/metadata/GalleryMetadata";
 
 interface Props {
   category: string;

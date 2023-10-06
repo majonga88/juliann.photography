@@ -6,21 +6,19 @@ import { useMediaQuery } from "@chakra-ui/react";
 import { SidebarContent } from "@/component/Sidebar/SidebarContent";
 import { MobileNav } from "@/component/Sidebar/MobileNav/MobileNav";
 import { ThemeProps } from "@/metadata/ThemeMetadata";
-
-interface LinkProps {
-  name: string;
-  path: string;
-}
+import { LinkProps } from "@/metadata/LinkProps";
 
 export default function Sidebar({
   isGallery,
   links,
   theme,
+  nextGalleryLink,
   children,
 }: {
   isGallery?: boolean;
   links?: Array<LinkProps>;
   theme: ThemeProps;
+  nextGalleryLink?: LinkProps;
   children: ReactNode;
 }) {
   const galleryMode = isGallery || false;
@@ -40,6 +38,7 @@ export default function Sidebar({
         display={{ base: "none", lg: "block" }}
         isGallery={galleryMode}
         theme={theme}
+        nextGalleryLink={nextGalleryLink}
         links={links}
       />
       {!galleryMode && (
@@ -58,6 +57,7 @@ export default function Sidebar({
                 isGallery={galleryMode}
                 onClose={onClose}
                 theme={theme}
+                nextGalleryLink={nextGalleryLink}
                 links={links}
               />
             </DrawerContent>

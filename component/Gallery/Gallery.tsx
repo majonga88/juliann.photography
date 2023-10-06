@@ -1,6 +1,7 @@
 import { GalleryFooter } from "./Footer/GalleryFooter";
 import { Transition } from "../Transition/Transition";
-import { ContentGallery, GalleryMetadata } from "./Content/ContentGallery";
+import { ContentGallery } from "./Content/ContentGallery";
+import { GalleryMetadata } from "@/metadata/GalleryMetadata";
 
 interface Props {
   category: string;
@@ -19,6 +20,7 @@ export function Gallery({ category, hideTitleNumber, gallery }: Props) {
       <GalleryFooter
         color={gallery.theme.color.font}
         hoverColor={gallery.theme.color.hover}
+        nextGalleryLink={gallery.nextGalleryLink}
       />
       <Transition backgroundColor={gallery.theme.color.background} />
     </div>

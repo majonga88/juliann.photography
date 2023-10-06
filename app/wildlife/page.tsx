@@ -9,7 +9,7 @@ import StyledScrollbar from "@/component/Scrollbar/StyledScrollbar";
 
 export default function Wildlife() {
   return (
-    <Sidebar isGallery theme={wildlife.theme}>
+    <Sidebar isGallery theme={wildlife.theme} nextGalleryLink={wildlife.nextGalleryLink}>
       <StyledScrollbar color={wildlife.theme.color.scroll} />
       <StyledGallery>
         <Quote

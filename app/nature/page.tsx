@@ -9,7 +9,7 @@ import { nature } from "@/data";
 
 export default function Nature() {
   return (
-    <Sidebar isGallery theme={nature.theme}>
+    <Sidebar isGallery theme={nature.theme} nextGalleryLink={nature.nextGalleryLink}>
       <StyledScrollbar color={nature.theme.color.scroll} />
       <StyledGallery>
         <Quote

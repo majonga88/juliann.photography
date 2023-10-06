@@ -9,7 +9,7 @@ import StyledScrollbar from "@/component/Scrollbar/StyledScrollbar";
 
 export default function Citylife() {
   return (
-    <Sidebar isGallery theme={citylife.theme}>
+    <Sidebar isGallery theme={citylife.theme} nextGalleryLink={citylife.nextGalleryLink}>
       <StyledScrollbar color={citylife.theme.color.scroll} />
       <StyledGallery>
         <Quote

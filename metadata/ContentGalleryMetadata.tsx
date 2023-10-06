@@ -1,3 +1,4 @@
+import { LinkProps } from "./LinkProps";
 import { PhotoMetadata } from "./PhotoMetadata";
 import { ThemeProps } from "./ThemeMetadata";
 
@@ -8,4 +9,5 @@ export interface ContentGalleryMetadata {
   author?: string;
   theme: ThemeProps;
   photos: PhotoMetadata[];
+  nextGalleryLink : LinkProps;
 }

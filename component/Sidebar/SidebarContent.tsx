@@ -2,7 +2,6 @@ import {
   Box,
   BoxProps,
   CloseButton,
-  Flex,
   Grid,
   GridItem,
   useBreakpointValue,
@@ -13,24 +12,21 @@ import { Icon } from "../Icon/Icon";
 import { ThemeProps } from "@/metadata/ThemeMetadata";
 import BackButton from "../Gallery/BackButton";
 import SocialButton from "../Gallery/SocialButton";
-import { useEffect, useState } from "react";
+import { LinkProps } from "@/metadata/LinkProps";
 
 interface Props extends BoxProps {
   onClose: () => void;
   isGallery: boolean;
   theme: ThemeProps;
+  nextGalleryLink?: LinkProps;
   links?: Array<LinkProps>;
-}
-
-interface LinkProps {
-  name: string;
-  path: string;
 }
 
 export function SidebarContent({
   onClose,
   isGallery,
   theme,
+  nextGalleryLink,
   links,
   ...rest
 }: Props) {
@@ -135,10 +131,9 @@ const rowHeight = useBreakpointValue({
       </Box>
       {isGallery && (
         <Box boxSize="5.5rem">
-          <BackButton></BackButton>
+          <BackButton arrow={nextGalleryLink?.arrow || ''} name={nextGalleryLink?.name || ''} path={nextGalleryLink?.path || ''}></BackButton>
         </Box>
       )}
-
       {!isGallery &&
         links &&
         links.map((link) => (
